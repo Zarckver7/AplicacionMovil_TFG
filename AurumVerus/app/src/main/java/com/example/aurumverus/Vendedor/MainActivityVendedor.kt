@@ -46,7 +46,7 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
         setSupportActionBar(toolbar)
 
         firebaseAuth = FirebaseAuth.getInstance()
-        comprobarSeseion()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -65,17 +65,20 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
         binding.navigationView.setCheckedItem(R.id.op_inicio_v)
     }
 
-    private fun cerrarSeseion(){
-        firebaseAuth.signOut()
-        startActivity(Intent(applicationContext, SeleccionUsuarioActivity::class.java))
-        finish()
-        Toast.makeText(applicationContext, "La sesión ha cerrado", Toast.LENGTH_SHORT).show()
+    private fun comprobarSesion() {
+        if (firebaseAuth!!.currentUser == null) {
+            startActivity(Intent(this@MainActivityVendedor, SeleccionUsuarioActivity::class.java))
+            finishAffinity()
+        }else{
+            Toast.makeText(applicationContext, "Bienvenido", Toast.LENGTH_SHORT).show()
+        }
     }
 
-    private fun comprobarSeseion() {
-        if (firebaseAuth!!.currentUser==null){
-            startActivity(Intent(applicationContext, SeleccionUsuarioActivity::class.java))
-        }
+    private fun cerrarSeseion() {
+        firebaseAuth.signOut()
+        startActivity(Intent(this@MainActivityVendedor, SeleccionUsuarioActivity::class.java))
+        finishAffinity()
+        Toast.makeText(applicationContext, "La sesión ha cerrado", Toast.LENGTH_SHORT).show()
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -88,12 +91,24 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.op_inicio_v ->{replaceFragment(FragmentInicioVendedor())}
-            R.id.op_mi_tienda_v -> {replaceFragment(FragmentMiTiendaVendedor())}
-            R.id.op_resena_v -> {replaceFragment(FragmentResena())}
-            R.id.op_cerrar_seseion_v -> {cerrarSeseion()}
-            R.id.op_mis_productos_v -> {replaceFragment(FragmentMisProductosVendedor())}
-            R.id.op_pedidos_v -> {replaceFragment(FragmentPedidosVendedor())}
+            R.id.op_inicio_v -> {
+                replaceFragment(FragmentInicioVendedor())
+            }
+            R.id.op_mi_tienda_v -> {
+                replaceFragment(FragmentMiTiendaVendedor())
+            }
+            R.id.op_resena_v -> {
+                replaceFragment(FragmentResena())
+            }
+            R.id.op_cerrar_seseion_v -> {
+                cerrarSeseion()
+            }
+            R.id.op_mis_productos_v -> {
+                replaceFragment(FragmentMisProductosVendedor())
+            }
+            R.id.op_pedidos_v -> {
+                replaceFragment(FragmentPedidosVendedor())
+            }
         }
 
         binding.drawerLayout.closeDrawer(GravityCompat.START)

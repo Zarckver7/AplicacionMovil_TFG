@@ -47,13 +47,11 @@ class RegistroVendedorActivity : AppCompatActivity() {
     private fun validarInformacion() {
         nombre = binding.edtxNombreV.text.toString().trim()
         correo = binding.edtxCorreoV.text.toString().trim()
-        contraseña = binding.edtxContraseAV.text.toString()
-            .trim()/*se sustituye el "ña" por "A" porque no reconoce la ñ*/
-        cContraseña = binding.edtxConContraseAV.text.toString()
-            .trim()/*se sustituye el "ña" por "A" porque no reconoce la ñ*/
+        contraseña = binding.edtxContraseAV.text.toString().trim()
+        cContraseña = binding.edtxConContraseAV.text.toString().trim()
 
         if (nombre.isEmpty()) {
-            binding.edtxNombreV.error = "Ingrese su nombre"
+            binding.edtxNombreV.error = "Ingrese el nombre de la empresa"
             binding.edtxNombreV.requestFocus()
         } else if (correo.isEmpty()) {
             binding.edtxCorreoV.error = "Ingrese su correo"

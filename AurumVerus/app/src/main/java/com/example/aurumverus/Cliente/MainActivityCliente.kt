@@ -1,5 +1,6 @@
 package com.example.aurumverus.Cliente
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
@@ -16,12 +17,16 @@ import com.example.aurumverus.Cliente.Botton_Nav_Fragments_Cliente.FragmentTiend
 import com.example.aurumverus.Cliente.Nav_Fragment_Cliente.FragmentInicioCliente
 import com.example.aurumverus.Cliente.Nav_Fragment_Cliente.FragmentMiPerfilCliente
 import com.example.aurumverus.R
+import com.example.aurumverus.SeleccionUsuarioActivity
 import com.example.aurumverus.databinding.ActivityMainClienteBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainClienteBinding
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +40,9 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        comprobarSesion()
 
         binding.navigationView.setNavigationItemSelectedListener(this)
 
@@ -50,7 +58,23 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
         toggle.syncState()
 
         replaceFragment(FragmentInicioCliente())
+        binding.navigationView.setCheckedItem(R.id.op_inicio_c)
+    }
 
+    private fun comprobarSesion() {
+        if (firebaseAuth!!.currentUser == null) {
+            startActivity(Intent(this@MainActivityCliente, SeleccionUsuarioActivity::class.java))
+            finishAffinity()
+        }else{
+            Toast.makeText(applicationContext, "Bienvenido", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun cerrarSeseion() {
+        firebaseAuth.signOut()
+        startActivity(Intent(this@MainActivityCliente, SeleccionUsuarioActivity::class.java))
+        finishAffinity()
+        Toast.makeText(applicationContext, "La sesión ha cerrado", Toast.LENGTH_SHORT).show()
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -70,7 +94,7 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
                 replaceFragment(FragmentMiPerfilCliente())
             }
             R.id.op_cerrar_seseion_c -> {
-                Toast.makeText(this, "Has cerrado sesión", Toast.LENGTH_SHORT).show()
+                cerrarSeseion()
             }
             R.id.op_tienda_c -> {
                 replaceFragment(FragmentTiendaCliente())

@@ -62,14 +62,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:passwordToggleEnabled="true">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/edtxContraseñaC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edtxContraseñaC"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:paddingEnd="48dp"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -78,14 +79,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:passwordToggleEnabled="true">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/edtxConContraseñaC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edtxConContraseñaC"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:paddingEnd="48dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

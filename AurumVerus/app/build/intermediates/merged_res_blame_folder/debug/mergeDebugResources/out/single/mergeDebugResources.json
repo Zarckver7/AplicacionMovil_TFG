@@ -132,8 +132,16 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\vendedor.png"
     },
     {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_activity_registro_vendedor.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_registro_vendedor.xml"
+    },
+    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_registro_vendedor.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_registro_vendedor.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_activity_registro_cliente.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_registro_cliente.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_fragment_mi_tienda_vendedor.xml.flat",
@@ -178,10 +186,6 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\drawable_ico_mis_productos.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\ico_mis_productos.xml"
-    },
-    {
-        "merged": "com.example.aurumverus.app-debug-45:/layout_activity_seleccion_usuario.xml.flat",
-        "source": "com.example.aurumverus.app-main-47:/layout/activity_seleccion_usuario.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\xml_backup_rules.xml.flat",
@@ -268,6 +272,10 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\ico_inicio.xml"
     },
     {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_activity_login_cliente.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_login_cliente.xml"
+    },
+    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_main_vendedor.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_main_vendedor.xml"
     },
@@ -282,6 +290,10 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\drawable_ico_salir.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\ico_salir.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_activity_login_vendedor.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_login_vendedor.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\xml_data_extraction_rules.xml.flat",
