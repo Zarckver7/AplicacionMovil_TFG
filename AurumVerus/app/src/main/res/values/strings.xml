@@ -43,7 +43,12 @@
     <!--Login vendedor-->
     <string name="txtLoginV">Inicio de Sesión Vendedor</string>
     <string name="btnLoginV">Iniciar Sesión</string>
-    <string name="tvRegistrarseV">Registrarse ahora</string>
+    <string name="tvRegistrarseV">Únete ahora</string>
+
+    <!--Login cliente-->
+    <string name="txtLoginC">Inicio de Sesión Cliente</string>
+    <string name="btnLoginC">Iniciar Sesión</string>
+    <string name="tvRegistrarseC">Registrarse ahora</string>
 
     <!--Agregar productos-->
     <string name="txtAgregarProd">Agregar Productos</string>
