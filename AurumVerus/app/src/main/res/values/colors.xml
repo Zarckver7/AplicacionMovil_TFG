@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="negro">#000000</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="azul_marino">#2471A3</color>
+    <color name="gris">#616161</color>
+    <color name="gris_claro">#BDBDBD</color>"
+    <color name="azul_claro">#03A9F4</color>
+    <color name="dorado">#FFD700</color>
+    <color name="dorado_claro">#FFEE9C</color>"
+    <color name="naranja">#FB8C00</color>
+    <color name="negro_claro">#212121</color>"
+
+</resources>

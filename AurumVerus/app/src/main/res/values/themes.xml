@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.AurumVerus" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores generales eliminados -->
+
+        <!-- Fondo y colores generales -->
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+
+    <!-- Estilo del Splash Screen (fondo blanco) -->
+    <style name="Theme.AurumVerus.Splash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/blanco</item>
+        <item name="android:statusBarColor">@android:color/black</item> <!-- Negro para barra de estado -->
+    </style>
+
+    <!-- Estilo para MainActivity con barra de estado negra -->
+    <style name="Theme.AurumVerus.MainActivity" parent="Base.Theme.AurumVerus">
+        <item name="android:statusBarColor">@android:color/black</item> <!-- Negro para barra de estado -->
+    </style>
+
+    <!-- Tema general de la aplicación -->
+    <style name="Theme.AurumVerus" parent="Base.Theme.AurumVerus" />
+</resources>

@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Aurum Verus</string>
+    <string name="bienbenida">Bienvenido a Aurum Verus</string>
+
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <!--NavigationDrawer Vendedor-->
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mi_tienda_v">Mi tienda</string>
+    <string name="op_resena_v">Reseñas</string>
+    <string name="op_cerrar_seseion_v">Cerrar Sesión</string>
+
+    <!--NavigationDrawer Cliente-->
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_mi_perfil_c">Mi perfil</string>
+    <string name="op_cerrar_seseion_c">Cerrar Sesión</string>
+
+    <!--BottonNavBar Vendedor-->
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_mis_pedidos_v">Pedidos</string>
+
+    <!--BottonNavBar Cliente-->
+    <string name="op_tienda_c">Tienda</string>
+    <string name="op_mis_pedidos_c">Mis pedidos</string>
+
+    <!--Registro vendedor-->
+    <string name="txtRegistroV">Registro de vendedor</string>
+    <string name="edtxNombreV">Nombre de Empresa</string>
+    <string name="edtxCorreoV">Correo electrónico de empresa</string>
+    <string name="edtxContraseñaV">Contraseña</string>"
+    <string name="edtxConContraseñaV">Confirmar Contraseña</string>"
+    <string name="btnRegistrarV">Registrarme</string>"
+
+    <!--Registro cliente-->
+    <string name="txtRegistroC">Registro de cliente</string>
+    <string name="edtxNombreC">Nombre de usuario</string>
+    <string name="edtxCorreoC">Correo electrónico</string>
+    <string name="edtxContraseñaC">Contraseña</string>"
+    <string name="edtxConContraseñaC">Confirmar Contraseña</string>"
+    <string name="btnRegistrarC">Registrarme</string>"
+
+    <!--Login vendedor-->
+    <string name="txtLoginV">Inicio de Sesión Vendedor</string>
+    <string name="btnLoginV">Iniciar Sesión</string>
+    <string name="tvRegistrarseV">Registrarse ahora</string>
+
+    <!--Agregar productos-->
+    <string name="txtAgregarProd">Agregar Productos</string>
+    <string name="edtxNombreProd">Nombre del producto</string>
+    <string name="edtxDescripcionProd">Descripcion</string>
+    <string name="categoria">Categoría</string>
+    <string name="edtxPrecio">Precio</string>
+    <string name="txtDescuento">Descuento</string>
+    <string name="edtxPrecioDesc">Precio con descuento</string>
+    <string name="edtxNotaDesc">Ej: 10% descuento</string>
+    <string name="btnAgregarProd">Agregar Producto</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
