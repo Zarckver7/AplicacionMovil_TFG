@@ -1,0 +1,6 @@
+com.example.aurumverus.test.app-core-1.6.1-0 C:\Users\ruizf\.gradle\caches\transforms-4\49babd28fa23d76fb401a47dd022d7e7\transformed\core-1.6.1\res
+com.example.aurumverus.test.app-tracing-1.2.0-1 C:\Users\ruizf\.gradle\caches\transforms-4\d65e35924b0ad902eb2e6eeae1c81a8c\transformed\tracing-1.2.0\res
+com.example.aurumverus.test.app-androidTest-2 C:\Users\ruizf\AndroidStudioProjects\AurumVerus\app\build\generated\res\resValues\androidTest\debug
+com.example.aurumverus.test.app-mergeDebugAndroidTestResources-3 C:\Users\ruizf\AndroidStudioProjects\AurumVerus\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.aurumverus.test.app-mergeDebugAndroidTestResources-4 C:\Users\ruizf\AndroidStudioProjects\AurumVerus\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.aurumverus.test.app-debugAndroidTest-5 C:\Users\ruizf\AndroidStudioProjects\AurumVerus\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

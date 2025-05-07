@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul_claro">#03A9F4</color>
+    <color name="azul_marino">#2471A3</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="dorado">#FFD700</color>
+    <color name="dorado_claro">#FFEE9C</color>
+    <color name="gris">#616161</color>
+    <color name="gris_claro">#BDBDBD</color>
+    <color name="ic_icono_background">#FFFFFF</color>
+    <color name="naranja">#FB8C00</color>
+    <color name="negro">#000000</color>
+    <color name="negro_claro">#212121</color>
+    <string name="app_name">Aurum Verus</string>
+    <string name="bienbenida">Bienvenido a Aurum Verus</string>
+    <string name="btnAgregarProd">Agregar Producto</string>
+    <string name="btnLoginV">Iniciar Sesión</string>
+    <string name="btnRegistrarV">Registrarme</string>
+    <string name="categoria">Categoría</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="edtxConContraseñaV">Confirmar Contraseña</string>
+    <string name="edtxContraseñaV">Contraseña</string>
+    <string name="edtxCorreoV">Correo electrónico</string>
+    <string name="edtxDescripcionProd">Descripcion</string>
+    <string name="edtxNombreProd">Nombre del producto</string>
+    <string name="edtxNombreV">Nombre de Empresa</string>
+    <string name="edtxNotaDesc">Ej: 10% descuento</string>
+    <string name="edtxPrecio">Precio</string>
+    <string name="edtxPrecioDesc">Precio con descuento</string>
+    <string name="gcm_defaultSenderId" translatable="false">461278668917</string>
+    <string name="google_api_key" translatable="false">AIzaSyBbSu2Yy8NkjWoZ62i4WEsBv1DGciydTMg</string>
+    <string name="google_app_id" translatable="false">1:461278668917:android:cef9e1f823642e60cf303c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBbSu2Yy8NkjWoZ62i4WEsBv1DGciydTMg</string>
+    <string name="google_storage_bucket" translatable="false">aurum-verus.firebasestorage.app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="op_cerrar_seseion_c">Cerrar Sesión</string>
+    <string name="op_cerrar_seseion_v">Cerrar Sesión</string>
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mi_perfil_c">Mi perfil</string>
+    <string name="op_mi_tienda_v">Mi tienda</string>
+    <string name="op_mis_pedidos_c">Mis pedidos</string>
+    <string name="op_mis_pedidos_v">Pedidos</string>
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_resena_v">Reseñas</string>
+    <string name="op_tienda_c">Tienda</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="project_id" translatable="false">aurum-verus</string>
+    <string name="tvRegistrarseV">Registrarse ahora</string>
+    <string name="txtAgregarProd">Agregar Productos</string>
+    <string name="txtDescuento">Descuento</string>
+    <string name="txtLoginV">Inicio de Sesión Vendedor</string>
+    <string name="txtRegistro">Registro de vendedor</string>
+    <style name="Base.Theme.AurumVerus" parent="Theme.Material3.Dark.NoActionBar">
+        
+
+        
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="Theme.AurumVerus" parent="Base.Theme.AurumVerus"/>
+    <style name="Theme.AurumVerus.MainActivity" parent="Base.Theme.AurumVerus">
+        <item name="android:statusBarColor">@android:color/black</item> 
+    </style>
+    <style name="Theme.AurumVerus.Splash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/blanco</item>
+        <item name="android:statusBarColor">@android:color/black</item> 
+    </style>
+</resources>
