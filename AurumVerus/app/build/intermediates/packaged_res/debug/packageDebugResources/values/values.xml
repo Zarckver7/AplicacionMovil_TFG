@@ -14,14 +14,20 @@
     <string name="app_name">Aurum Verus</string>
     <string name="bienbenida">Bienvenido a Aurum Verus</string>
     <string name="btnAgregarProd">Agregar Producto</string>
+    <string name="btnLoginC">Iniciar Sesión</string>
     <string name="btnLoginV">Iniciar Sesión</string>
+    <string name="btnRegistrarC">Registrarme</string>
     <string name="btnRegistrarV">Registrarme</string>
     <string name="categoria">Categoría</string>
     <string name="close_drawer">Close drawer</string>
+    <string name="edtxConContraseñaC">Confirmar Contraseña</string>
     <string name="edtxConContraseñaV">Confirmar Contraseña</string>
+    <string name="edtxContraseñaC">Contraseña</string>
     <string name="edtxContraseñaV">Contraseña</string>
-    <string name="edtxCorreoV">Correo electrónico</string>
+    <string name="edtxCorreoC">Correo electrónico</string>
+    <string name="edtxCorreoV">Correo electrónico de empresa</string>
     <string name="edtxDescripcionProd">Descripcion</string>
+    <string name="edtxNombreC">Nombre de usuario</string>
     <string name="edtxNombreProd">Nombre del producto</string>
     <string name="edtxNombreV">Nombre de Empresa</string>
     <string name="edtxNotaDesc">Ej: 10% descuento</string>
@@ -46,11 +52,17 @@
     <string name="op_tienda_c">Tienda</string>
     <string name="open_drawer">Open drawer</string>
     <string name="project_id" translatable="false">aurum-verus</string>
-    <string name="tvRegistrarseV">Registrarse ahora</string>
+    <string name="tipoCliente">Soy Cliente</string>
+    <string name="tipoVendedor">Soy Vendedor</string>
+    <string name="tvRegistrarseC">Registrarse ahora</string>
+    <string name="tvRegistrarseV">Únete ahora</string>
     <string name="txtAgregarProd">Agregar Productos</string>
     <string name="txtDescuento">Descuento</string>
+    <string name="txtInicioSeleccion">Seleccione su tipo de usuario</string>
+    <string name="txtLoginC">Inicio de Sesión Cliente</string>
     <string name="txtLoginV">Inicio de Sesión Vendedor</string>
-    <string name="txtRegistro">Registro de vendedor</string>
+    <string name="txtRegistroC">Registro de cliente</string>
+    <string name="txtRegistroV">Registro de vendedor</string>
     <style name="Base.Theme.AurumVerus" parent="Theme.Material3.Dark.NoActionBar">
         
 

@@ -24,7 +24,12 @@
     <string name="op_tienda_c">Tienda</string>
     <string name="op_mis_pedidos_c">Mis pedidos</string>
 
-    <!--Registro vendedor-->
+    <!--Tipo Usuario-->
+    <string name="txtInicioSeleccion">Seleccione su tipo de usuario</string>
+    <string name="tipoVendedor">Soy Vendedor</string>
+    <string name="tipoCliente">Soy Cliente</string>
+
+    <!--Registro Vendedor-->
     <string name="txtRegistroV">Registro de vendedor</string>
     <string name="edtxNombreV">Nombre de Empresa</string>
     <string name="edtxCorreoV">Correo electrónico de empresa</string>
@@ -32,7 +37,7 @@
     <string name="edtxConContraseñaV">Confirmar Contraseña</string>"
     <string name="btnRegistrarV">Registrarme</string>"
 
-    <!--Registro cliente-->
+    <!--Registro Cliente-->
     <string name="txtRegistroC">Registro de cliente</string>
     <string name="edtxNombreC">Nombre de usuario</string>
     <string name="edtxCorreoC">Correo electrónico</string>
@@ -40,12 +45,12 @@
     <string name="edtxConContraseñaC">Confirmar Contraseña</string>"
     <string name="btnRegistrarC">Registrarme</string>"
 
-    <!--Login vendedor-->
+    <!--Login Vendedor-->
     <string name="txtLoginV">Inicio de Sesión Vendedor</string>
     <string name="btnLoginV">Iniciar Sesión</string>
     <string name="tvRegistrarseV">Únete ahora</string>
 
-    <!--Login cliente-->
+    <!--Login Cliente-->
     <string name="txtLoginC">Inicio de Sesión Cliente</string>
     <string name="btnLoginC">Iniciar Sesión</string>
     <string name="tvRegistrarseC">Registrarse ahora</string>

@@ -1,9 +1,11 @@
 package com.example.aurumverus
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.aurumverus.Cliente.MainActivityCliente
 import com.example.aurumverus.Vendedor.MainActivityVendedor
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +20,11 @@ class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
+        }
+
         setContentView(R.layout.activity_splash_screen)
 
         firebaseAuth = FirebaseAuth.getInstance()
@@ -43,7 +50,7 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun comprobarUsuario(){
         val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser == null){
-            startActivity(Intent(this, MainActivityVendedor::class.java))
+            startActivity(Intent(this, SeleccionUsuarioActivity::class.java))
         }else{
             val reference = FirebaseDatabase.getInstance().getReference("Usuario")
             reference.child(firebaseUser.uid)

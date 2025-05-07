@@ -52,6 +52,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.AurumVerus" >
         <activity
+            android:name="com.example.aurumverus.SeleccionUsuarioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.aurumverus.Cliente.LoginClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.aurumverus.Cliente.RegistroClienteActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.aurumverus.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait"

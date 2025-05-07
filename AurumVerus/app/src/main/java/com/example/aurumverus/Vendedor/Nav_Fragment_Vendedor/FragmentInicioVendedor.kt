@@ -23,6 +23,7 @@ class FragmentInicioVendedor : Fragment() {
     override fun onAttach(context: Context) {
         mContext = context
         super.onAttach(context)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

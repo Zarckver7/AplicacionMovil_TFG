@@ -1,5 +1,6 @@
 package com.example.aurumverus.Cliente
 
+import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
 import android.view.MenuItem
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.aurumverus.Cliente.Botton_Nav_Fragments_Cliente.FragmentMisPedidosCliente
@@ -23,6 +25,11 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
+        }
+
         binding = ActivityMainClienteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -1,6 +1,7 @@
 package com.example.aurumverus.Vendedor
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -8,11 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.aurumverus.R
+import com.example.aurumverus.SeleccionUsuarioActivity
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentMisProductosVendedor
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentPedidosVendedor
 import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentInicioVendedor
@@ -31,6 +34,11 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
+        }
+
         binding = ActivityMainVendedorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -59,14 +67,14 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     private fun cerrarSeseion(){
         firebaseAuth.signOut()
-        startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        startActivity(Intent(applicationContext, SeleccionUsuarioActivity::class.java))
         finish()
         Toast.makeText(applicationContext, "La sesión ha cerrado", Toast.LENGTH_SHORT).show()
     }
 
     private fun comprobarSeseion() {
         if (firebaseAuth!!.currentUser==null){
-            startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+            startActivity(Intent(applicationContext, SeleccionUsuarioActivity::class.java))
         }
     }
 

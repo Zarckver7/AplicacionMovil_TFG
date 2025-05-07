@@ -3,11 +3,13 @@ package com.example.aurumverus.Vendedor.Productos
 import android.app.Activity
 import android.app.ProgressDialog
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.aurumverus.Adaptadores.AdaptadorImagenSeleccionada
 import com.example.aurumverus.Constantes
 import com.example.aurumverus.ImagenSeleccionada.ImagenSeleccionada
@@ -29,6 +31,11 @@ class AgregarProductoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
+        }
+
         binding = ActivityAgregarProductoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

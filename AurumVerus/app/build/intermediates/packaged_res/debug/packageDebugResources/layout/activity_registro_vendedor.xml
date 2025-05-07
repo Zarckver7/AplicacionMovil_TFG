@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="@string/txtRegistro"
+            android:text="@string/txtRegistroV"
             android:textSize="24dp"
             android:textStyle="bold" />
 

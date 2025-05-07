@@ -2,10 +2,12 @@ package com.example.aurumverus.Vendedor
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.aurumverus.R
 import com.example.aurumverus.databinding.ActivityLoginVendedorBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +20,11 @@ class LoginVendedorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
+        }
+
         binding = ActivityLoginVendedorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

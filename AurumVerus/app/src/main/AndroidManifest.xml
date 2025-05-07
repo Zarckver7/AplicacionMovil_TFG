@@ -25,6 +25,9 @@
         android:theme="@style/Theme.AurumVerus"
         tools:targetApi="31">
         <activity
+            android:name=".SeleccionUsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".Cliente.LoginClienteActivity"
             android:exported="false" />
         <activity

@@ -81,7 +81,7 @@
             app:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/edtxConContraseñaC"
+                android:id="@+id/edtxConContraseñaV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edtxConContraseñaV"
