@@ -19,7 +19,6 @@ import com.example.aurumverus.SeleccionUsuarioActivity
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentMisProductosVendedor
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentPedidosVendedor
 import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentInicioVendedor
-import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentMiTiendaVendedor
 import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentResena
 import com.example.aurumverus.databinding.ActivityMainVendedorBinding
 import com.google.android.material.navigation.NavigationView
@@ -93,9 +92,6 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
         when(item.itemId) {
             R.id.op_inicio_v -> {
                 replaceFragment(FragmentInicioVendedor())
-            }
-            R.id.op_mi_tienda_v -> {
-                replaceFragment(FragmentMiTiendaVendedor())
             }
             R.id.op_resena_v -> {
                 replaceFragment(FragmentResena())

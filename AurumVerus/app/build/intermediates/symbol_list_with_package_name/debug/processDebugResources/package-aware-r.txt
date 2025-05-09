@@ -3301,10 +3301,9 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id TI_Categoria
 id TI_DescripcionProd
-id TI_Descuento
 id TI_NombreProd
-id TI_NotaDesc
 id TI_Precio
 id TOP_END
 id TOP_START
@@ -3384,6 +3383,7 @@ id arc
 id asConfigured
 id async
 id auto
+id autoCategoria
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
@@ -3505,9 +3505,7 @@ id edtxDescripcionProd
 id edtxNombreC
 id edtxNombreProd
 id edtxNombreV
-id edtxNotaDesc
 id edtxPrecio
-id edtxPrecioDesc
 id elastic
 id embed
 id end
@@ -3569,6 +3567,7 @@ id image_view_state_scale
 id imagenRL
 id imagenesProductos
 id imgAgregarProd
+id imgProducto
 id immediateStop
 id included
 id indeterminate
@@ -3688,7 +3687,6 @@ id op_cerrar_seseion_v
 id op_inicio_c
 id op_inicio_v
 id op_mi_perfil_c
-id op_mi_tienda_v
 id op_mis_pedidos_c
 id op_mis_productos_v
 id op_pedidos_v
@@ -3726,6 +3724,7 @@ id pin
 id position
 id postLayout
 id pressed
+id productosRecyclerView
 id progress_circular
 id progress_horizontal
 id radio
@@ -3809,7 +3808,6 @@ id subirImg
 id submenuarrow
 id submit_area
 id supportScrollUp
-id switchDesc
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3865,6 +3863,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvNombreProducto
+id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
 id ucrop
@@ -4048,7 +4048,6 @@ layout dialog_choose_app
 layout fragment_inicio_cliente
 layout fragment_inicio_vendedor
 layout fragment_mi_perfil_cliente
-layout fragment_mi_tienda_vendedor
 layout fragment_mis_pedidos_cliente
 layout fragment_mis_productos_vendedor
 layout fragment_pedidos_vendedor
@@ -4057,6 +4056,7 @@ layout fragment_tienda_cliente
 layout imagenes_elegidas
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_producto
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4120,6 +4120,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_item_dropdown
 layout support_simple_spinner_dropdown_item
 layout ucrop_activity_photobox
 layout ucrop_aspect_ratio
@@ -5328,6 +5329,7 @@ style Widget_Material3_FloatingActionButton_Tertiary
 style Widget_Material3_Light_ActionBar_Solid
 style Widget_Material3_LinearProgressIndicator
 style Widget_Material3_LinearProgressIndicator_Legacy
+style Widget_Material3_MaterialAutoCompleteTextView
 style Widget_Material3_MaterialButtonToggleGroup
 style Widget_Material3_MaterialCalendar
 style Widget_Material3_MaterialCalendar_Day

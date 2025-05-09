@@ -12,46 +12,43 @@
     <RelativeLayout
         android:id="@+id/toolbarRL"
         android:layout_width="match_parent"
-        android:background="@color/negro_claro"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/negro_claro">
 
         <TextView
-            android:text="@string/txtAgregarProd"
-            android:layout_centerInParent="true"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/txtAgregarProd"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/gris"/>
-
+            android:background="@color/gris" />
     </RelativeLayout>
-    
+
     <RelativeLayout
         android:id="@+id/imagenRL"
         android:layout_below="@id/toolbarRL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgAgregarProd"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/agregar_producto"
             android:layout_width="100dp"
-            android:layout_height="100dp"/>
-
-
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/agregar_producto" />
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_below="@id/imagenRL"
-        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,11 +56,11 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/imagenesProductos"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/imagenes_elegidas"
-                app:spanCount="4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/imagenes_elegidas" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TI_NombreProd"
@@ -73,11 +70,10 @@
 
                 <EditText
                     android:id="@+id/edtxNombreProd"
-                    android:hint="@string/edtxNombreProd"
-                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edtxNombreProd"
+                    android:inputType="textCapSentences" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -88,11 +84,10 @@
 
                 <EditText
                     android:id="@+id/edtxDescripcionProd"
-                    android:hint="@string/edtxDescripcionProd"
-                    android:inputType="textCapSentences"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edtxDescripcionProd"
+                    android:inputType="textCapSentences" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -103,67 +98,46 @@
 
                 <EditText
                     android:id="@+id/edtxPrecio"
-                    android:hint="@string/edtxPrecio"
-                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edtxPrecio"
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchDesc"
-                android:layout_below="@id/TI_Precio"
-                android:text="@string/txtDescuento"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TI_Categoria"
+                android:layout_below="@+id/TI_Precio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:trackTint="@color/contorno_switch"
-                app:thumbTint="@color/color_switch"/>
+                android:layout_marginTop="10dp"
+                android:hint="Categoría">
 
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TI_Descuento"
-                android:layout_below="@id/switchDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edtxPrecioDesc"
-                    android:hint="@string/edtxPrecioDesc"
-                    android:inputType="numberDecimal"
+                <AutoCompleteTextView
+                    android:id="@+id/autoCategoria"
+                    style="@style/Widget.Material3.MaterialAutoCompleteTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="true"
+                    android:cursorVisible="false"
+                    android:clickable="true"
+                    android:dropDownHeight="200dp"
+                    android:background="@color/negro"
+                    android:textColor="@color/blanco"
+                    android:padding="12dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TI_NotaDesc"
-                android:layout_below="@id/TI_Descuento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edtxNotaDesc"
-                    android:hint="@string/edtxNotaDesc"
-                    android:inputType="textCapSentences"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
-
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAgregarProd"
-        android:text="@string/btnAgregarProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        app:cornerRadius="10dp"
         android:backgroundTint="@color/dorado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        app:cornerRadius="10dp"
+        android:text="@string/btnAgregarProd" />
 </RelativeLayout>

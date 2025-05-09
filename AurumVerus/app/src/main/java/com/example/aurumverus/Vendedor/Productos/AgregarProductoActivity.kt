@@ -5,7 +5,9 @@ import android.app.ProgressDialog
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -15,19 +17,26 @@ import com.example.aurumverus.Constantes
 import com.example.aurumverus.ImagenSeleccionada.ImagenSeleccionada
 import com.example.aurumverus.R
 import com.example.aurumverus.databinding.ActivityAgregarProductoBinding
-import com.example.aurumverus.databinding.ActivityRegistroVendedorBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 
 class AgregarProductoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAgregarProductoBinding
     private lateinit var progressDialog: ProgressDialog
-    private var imagenUri : Uri?=null
+    private var imagenUri: Uri? = null
 
-    private lateinit var imagenSeleccionadaArrayList : ArrayList<ImagenSeleccionada>
-    private lateinit var adaptadorImagenSeleccionada : AdaptadorImagenSeleccionada
+    private lateinit var imagenSeleccionadaArrayList: ArrayList<ImagenSeleccionada>
+    private lateinit var adaptadorImagenSeleccionada: AdaptadorImagenSeleccionada
+    private lateinit var firebaseAuth: FirebaseAuth
 
+    private var nombreP = ""
+    private var descripcionP = ""
+    private var precioP = ""
+    private var categoriaP = ""
+    private var nombreVendedor = ""
+    private var horaBD = Constantes().tiempoD()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,34 +48,45 @@ class AgregarProductoActivity : AppCompatActivity() {
         binding = ActivityAgregarProductoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        firebaseAuth = FirebaseAuth.getInstance()
         imagenSeleccionadaArrayList = ArrayList()
-
-        binding.imgAgregarProd.setOnClickListener {
-            seleccionarImagen()
-        }
-
         cargarImagenes()
+
+        setupSpinner()
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Espere por favor...")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        binding.edtxPrecioDesc.visibility = View.GONE
-        binding.edtxNotaDesc.visibility = View.GONE
-
-        binding.switchDesc.setOnCheckedChangeListener {buttonView, isChecked ->
-            if (isChecked) {
-                binding.edtxPrecioDesc.visibility = View.VISIBLE
-                binding.edtxNotaDesc.visibility = View.VISIBLE
-            } else {
-                binding.edtxPrecioDesc.visibility = View.GONE
-                binding.edtxNotaDesc.visibility = View.GONE
-            }
+        binding.imgAgregarProd.setOnClickListener {
+            seleccionarImagen()
         }
 
         binding.btnAgregarProd.setOnClickListener {
             validarInformacion()
         }
+    }
+
+    private fun setupSpinner() {
+        val categorias = listOf(
+            "Ropa", "Electrónica", "Comida", "Accesorios", "Hogar",
+            "Bolsos y mochilas", "Joyería", "Consolas y videojuegos", "Perfumería", "Libros", "Otros"
+        )
+
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.spinner_item_dropdown,
+            categorias
+        )
+
+        binding.autoCategoria.setAdapter(adapter)
+
+        binding.autoCategoria.setOnTouchListener { _, _ ->
+            binding.autoCategoria.showDropDown()
+            false // permite que el clic se propague normalmente
+        }
+
+
 
     }
 
@@ -75,19 +95,12 @@ class AgregarProductoActivity : AppCompatActivity() {
         binding.imagenesProductos.adapter = adaptadorImagenSeleccionada
     }
 
-    private var nombreP = ""
-    private var descripcionP = ""
-    private var precioP = ""
-    private var switchDescuento = false
-    private var precioDesc = ""
-    private var notaDesc = ""
-
     private fun seleccionarImagen() {
         ImagePicker.with(this)
             .crop()
             .compress(maxSize = 1024)
             .maxResultSize(1080, 1080)
-            .createIntent { intent->
+            .createIntent { intent ->
                 resultadoImagen.launch(intent)
             }
     }
@@ -97,7 +110,7 @@ class AgregarProductoActivity : AppCompatActivity() {
             if (resultado.resultCode == Activity.RESULT_OK) {
                 val data = resultado.data
                 imagenUri = data?.data
-                val tiempo = "${Constantes().tiempoD()}"
+                val tiempo = Constantes().tiempoD()
 
                 val modeloImagenSeleccionada = ImagenSeleccionada(tiempo, imagenUri, null, false)
                 imagenSeleccionadaArrayList.add(modeloImagenSeleccionada)
@@ -107,13 +120,11 @@ class AgregarProductoActivity : AppCompatActivity() {
             }
         }
 
-
     private fun validarInformacion() {
         nombreP = binding.edtxNombreProd.text.toString().trim()
         descripcionP = binding.edtxDescripcionProd.text.toString().trim()
         precioP = binding.edtxPrecio.text.toString().trim()
-        switchDescuento = binding.switchDesc.isChecked
-
+        val categoriaSeleccionada = binding.autoCategoria.text.toString().trim()
 
         if (nombreP.isEmpty()) {
             binding.edtxNombreProd.error = "Ingrese el nombre del producto"
@@ -124,43 +135,49 @@ class AgregarProductoActivity : AppCompatActivity() {
         } else if (precioP.isEmpty()) {
             binding.edtxPrecio.error = "Ingrese el precio del producto"
             binding.edtxPrecio.requestFocus()
-        } else {
-            if (switchDescuento) {
-                precioDesc = binding.edtxPrecioDesc.text.toString().trim()
-                notaDesc = binding.edtxNotaDesc.text.toString().trim()
-                if (precioDesc.isEmpty()) {
-                    binding.edtxPrecioDesc.error = "Ingrese el precio del descuento"
-                    binding.edtxPrecioDesc.requestFocus()
-                } else if (notaDesc.isEmpty()) {
-                    binding.edtxNotaDesc.error = "Ingrese la nota del descuento"
-                    binding.edtxNotaDesc.requestFocus()
-                } else {
-                    agregarProducto()
-                }
-            }else {
-                precioDesc = "0"
-                notaDesc = ""
-                agregarProducto()
-            }
+        }else if (categoriaSeleccionada.isEmpty()) {
+            Toast.makeText(this, "Seleccione una categoría", Toast.LENGTH_SHORT).show()
+            return
         }
+        else {
+            obtenerNombreVendedorYAgregar()
         }
+    }
 
-    private fun agregarProducto() {
+    private fun obtenerNombreVendedorYAgregar() {
+        val uid = firebaseAuth.uid ?: return
+        val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
+        ref.child(uid)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    nombreVendedor = snapshot.child("nombre").value?.toString() ?: "Desconocido"
+                    agregarProducto(uid)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@AgregarProductoActivity, "Error al obtener datos del vendedor", Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
+
+    private fun agregarProducto(uid: String) {
         progressDialog.setMessage("Agregando producto")
         progressDialog.show()
 
-        var ref = FirebaseDatabase.getInstance().getReference("Productos")
-        val idProducto = ref.push().key
+        val ref = FirebaseDatabase.getInstance().getReference("Productos")
+        val idProducto = ref.push().key ?: return
 
         val hashMap = HashMap<String, Any>()
-        hashMap["idProducto"] = "$idProducto"
-        hashMap["nombre"] = "$nombreP"
-        hashMap["descripcion"] = "$descripcionP"
-        hashMap["precio"] = "$precioP"
-        hashMap["precioDescuento"] = "$precioDesc"
-        hashMap["notaDescuento"] = "$notaDesc"
+        hashMap["idProducto"] = idProducto
+        hashMap["nombre"] = nombreP
+        hashMap["descripcion"] = descripcionP
+        hashMap["precio"] = precioP
+        hashMap["categoria"] = categoriaP
+        hashMap["uid"] = uid
+        hashMap["nombreVendedor"] = nombreVendedor
+        hashMap["horaCreacion"] = horaBD
 
-        ref.child("$idProducto")
+        ref.child(idProducto)
             .setValue(hashMap)
             .addOnSuccessListener {
                 progressDialog.dismiss()
@@ -171,17 +188,14 @@ class AgregarProductoActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
             }
-
     }
 
     private fun limpiarCampos() {
         binding.edtxNombreProd.text.clear()
         binding.edtxDescripcionProd.text.clear()
         binding.edtxPrecio.text.clear()
-        binding.edtxPrecioDesc.text.clear()
-        binding.edtxNotaDesc.text.clear()
-        binding.switchDesc.isChecked = false
-
+        binding.autoCategoria.text.clear()
+        imagenSeleccionadaArrayList.clear()
+        adaptadorImagenSeleccionada.notifyDataSetChanged()
     }
-
 }

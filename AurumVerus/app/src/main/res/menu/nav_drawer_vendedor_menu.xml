@@ -14,13 +14,6 @@
         </item>
 
         <item
-            android:id="@+id/op_mi_tienda_v"
-            android:title="@string/op_mi_tienda_v"
-            android:icon="@drawable/ico_mi_tienda">
-            
-        </item>
-
-        <item
             android:id="@+id/op_resena_v"
             android:title="@string/op_resena_v"
             android:icon="@drawable/ico_resenas">

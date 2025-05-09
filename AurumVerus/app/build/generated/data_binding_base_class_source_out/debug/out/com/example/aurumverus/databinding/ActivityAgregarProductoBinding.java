@@ -4,12 +4,12 @@ package com.example.aurumverus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -25,19 +25,19 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextInputLayout TIDescripcionProd;
+  public final TextInputLayout TICategoria;
 
   @NonNull
-  public final TextInputLayout TIDescuento;
+  public final TextInputLayout TIDescripcionProd;
 
   @NonNull
   public final TextInputLayout TINombreProd;
 
   @NonNull
-  public final TextInputLayout TINotaDesc;
+  public final TextInputLayout TIPrecio;
 
   @NonNull
-  public final TextInputLayout TIPrecio;
+  public final AutoCompleteTextView autoCategoria;
 
   @NonNull
   public final MaterialButton btnAgregarProd;
@@ -49,13 +49,7 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
   public final EditText edtxNombreProd;
 
   @NonNull
-  public final EditText edtxNotaDesc;
-
-  @NonNull
   public final EditText edtxPrecio;
-
-  @NonNull
-  public final EditText edtxPrecioDesc;
 
   @NonNull
   public final RelativeLayout imagenRL;
@@ -70,38 +64,30 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
   public final RelativeLayout main;
 
   @NonNull
-  public final SwitchCompat switchDesc;
-
-  @NonNull
   public final RelativeLayout toolbarRL;
 
   private ActivityAgregarProductoBinding(@NonNull RelativeLayout rootView,
-      @NonNull TextInputLayout TIDescripcionProd, @NonNull TextInputLayout TIDescuento,
-      @NonNull TextInputLayout TINombreProd, @NonNull TextInputLayout TINotaDesc,
-      @NonNull TextInputLayout TIPrecio, @NonNull MaterialButton btnAgregarProd,
+      @NonNull TextInputLayout TICategoria, @NonNull TextInputLayout TIDescripcionProd,
+      @NonNull TextInputLayout TINombreProd, @NonNull TextInputLayout TIPrecio,
+      @NonNull AutoCompleteTextView autoCategoria, @NonNull MaterialButton btnAgregarProd,
       @NonNull EditText edtxDescripcionProd, @NonNull EditText edtxNombreProd,
-      @NonNull EditText edtxNotaDesc, @NonNull EditText edtxPrecio,
-      @NonNull EditText edtxPrecioDesc, @NonNull RelativeLayout imagenRL,
+      @NonNull EditText edtxPrecio, @NonNull RelativeLayout imagenRL,
       @NonNull RecyclerView imagenesProductos, @NonNull AppCompatImageView imgAgregarProd,
-      @NonNull RelativeLayout main, @NonNull SwitchCompat switchDesc,
-      @NonNull RelativeLayout toolbarRL) {
+      @NonNull RelativeLayout main, @NonNull RelativeLayout toolbarRL) {
     this.rootView = rootView;
+    this.TICategoria = TICategoria;
     this.TIDescripcionProd = TIDescripcionProd;
-    this.TIDescuento = TIDescuento;
     this.TINombreProd = TINombreProd;
-    this.TINotaDesc = TINotaDesc;
     this.TIPrecio = TIPrecio;
+    this.autoCategoria = autoCategoria;
     this.btnAgregarProd = btnAgregarProd;
     this.edtxDescripcionProd = edtxDescripcionProd;
     this.edtxNombreProd = edtxNombreProd;
-    this.edtxNotaDesc = edtxNotaDesc;
     this.edtxPrecio = edtxPrecio;
-    this.edtxPrecioDesc = edtxPrecioDesc;
     this.imagenRL = imagenRL;
     this.imagenesProductos = imagenesProductos;
     this.imgAgregarProd = imgAgregarProd;
     this.main = main;
-    this.switchDesc = switchDesc;
     this.toolbarRL = toolbarRL;
   }
 
@@ -132,15 +118,15 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.TI_DescripcionProd;
-      TextInputLayout TIDescripcionProd = ViewBindings.findChildViewById(rootView, id);
-      if (TIDescripcionProd == null) {
+      id = R.id.TI_Categoria;
+      TextInputLayout TICategoria = ViewBindings.findChildViewById(rootView, id);
+      if (TICategoria == null) {
         break missingId;
       }
 
-      id = R.id.TI_Descuento;
-      TextInputLayout TIDescuento = ViewBindings.findChildViewById(rootView, id);
-      if (TIDescuento == null) {
+      id = R.id.TI_DescripcionProd;
+      TextInputLayout TIDescripcionProd = ViewBindings.findChildViewById(rootView, id);
+      if (TIDescripcionProd == null) {
         break missingId;
       }
 
@@ -150,15 +136,15 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.TI_NotaDesc;
-      TextInputLayout TINotaDesc = ViewBindings.findChildViewById(rootView, id);
-      if (TINotaDesc == null) {
-        break missingId;
-      }
-
       id = R.id.TI_Precio;
       TextInputLayout TIPrecio = ViewBindings.findChildViewById(rootView, id);
       if (TIPrecio == null) {
+        break missingId;
+      }
+
+      id = R.id.autoCategoria;
+      AutoCompleteTextView autoCategoria = ViewBindings.findChildViewById(rootView, id);
+      if (autoCategoria == null) {
         break missingId;
       }
 
@@ -180,21 +166,9 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtxNotaDesc;
-      EditText edtxNotaDesc = ViewBindings.findChildViewById(rootView, id);
-      if (edtxNotaDesc == null) {
-        break missingId;
-      }
-
       id = R.id.edtxPrecio;
       EditText edtxPrecio = ViewBindings.findChildViewById(rootView, id);
       if (edtxPrecio == null) {
-        break missingId;
-      }
-
-      id = R.id.edtxPrecioDesc;
-      EditText edtxPrecioDesc = ViewBindings.findChildViewById(rootView, id);
-      if (edtxPrecioDesc == null) {
         break missingId;
       }
 
@@ -218,22 +192,16 @@ public final class ActivityAgregarProductoBinding implements ViewBinding {
 
       RelativeLayout main = (RelativeLayout) rootView;
 
-      id = R.id.switchDesc;
-      SwitchCompat switchDesc = ViewBindings.findChildViewById(rootView, id);
-      if (switchDesc == null) {
-        break missingId;
-      }
-
       id = R.id.toolbarRL;
       RelativeLayout toolbarRL = ViewBindings.findChildViewById(rootView, id);
       if (toolbarRL == null) {
         break missingId;
       }
 
-      return new ActivityAgregarProductoBinding((RelativeLayout) rootView, TIDescripcionProd,
-          TIDescuento, TINombreProd, TINotaDesc, TIPrecio, btnAgregarProd, edtxDescripcionProd,
-          edtxNombreProd, edtxNotaDesc, edtxPrecio, edtxPrecioDesc, imagenRL, imagenesProductos,
-          imgAgregarProd, main, switchDesc, toolbarRL);
+      return new ActivityAgregarProductoBinding((RelativeLayout) rootView, TICategoria,
+          TIDescripcionProd, TINombreProd, TIPrecio, autoCategoria, btnAgregarProd,
+          edtxDescripcionProd, edtxNombreProd, edtxPrecio, imagenRL, imagenesProductos,
+          imgAgregarProd, main, toolbarRL);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

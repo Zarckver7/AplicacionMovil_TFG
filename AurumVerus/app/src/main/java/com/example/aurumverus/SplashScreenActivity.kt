@@ -52,7 +52,7 @@ class SplashScreenActivity : AppCompatActivity() {
         if(firebaseUser == null){
             startActivity(Intent(this, SeleccionUsuarioActivity::class.java))
         }else{
-            val reference = FirebaseDatabase.getInstance().getReference("Usuario")
+            val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
             reference.child(firebaseUser.uid)
                 .addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {

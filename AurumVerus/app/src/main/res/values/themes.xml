@@ -19,6 +19,11 @@
         <item name="android:statusBarColor">@android:color/black</item> <!-- Negro para barra de estado -->
     </style>
 
+    <style name="Widget.Material3.MaterialAutoCompleteTextView" parent="Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <item name="android:popupBackground">@color/blanco</item>
+    </style>
+
+
     <!-- Tema general de la aplicación -->
     <style name="Theme.AurumVerus" parent="Base.Theme.AurumVerus" />
 </resources>
