@@ -4,7 +4,7 @@
             "outputFile": "com.example.aurumverus.app-mergeDebugResources-43:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\e7462101801c562b5ee8ce514c3f9332\\transformed\\appcompat-1.7.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\6994b4f0158349cb02eb8e037fd570d7\\transformed\\appcompat-1.7.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\4ee9c122166ffedb052abecda33b74ec\\transformed\\material-1.12.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\65a1303036a87d9e86927e493cbe468c\\transformed\\material-1.12.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

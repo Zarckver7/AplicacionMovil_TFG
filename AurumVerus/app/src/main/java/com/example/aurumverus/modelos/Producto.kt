@@ -7,5 +7,6 @@ data class Producto(
     val descripcion: String? = "",
     val precio: String? = "",
     val categoria: String? = "",
-    val nombreVendedor: String? = ""
+    val nombreVendedor: String? = "",
+    val imagenPrincipal: String? = ""
 )

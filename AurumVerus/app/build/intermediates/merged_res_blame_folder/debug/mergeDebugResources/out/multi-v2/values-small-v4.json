@@ -4,7 +4,7 @@
             "outputFile": "com.example.aurumverus.app-mergeDebugResources-43:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\4ee9c122166ffedb052abecda33b74ec\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\65a1303036a87d9e86927e493cbe468c\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

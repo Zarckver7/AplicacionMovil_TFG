@@ -4,7 +4,7 @@
             "outputFile": "com.example.aurumverus.app-mergeDebugResources-43:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\e7462101801c562b5ee8ce514c3f9332\\transformed\\appcompat-1.7.0\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\6994b4f0158349cb02eb8e037fd570d7\\transformed\\appcompat-1.7.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

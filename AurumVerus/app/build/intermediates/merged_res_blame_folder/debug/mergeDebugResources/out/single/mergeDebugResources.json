@@ -144,10 +144,6 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_registro_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_fragment_mi_tienda_vendedor.xml.flat",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_mi_tienda_vendedor.xml"
-    },
-    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_agregar_producto.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_agregar_producto.xml"
     },
@@ -208,24 +204,24 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\menu\\botton_nav_bar_vendedor_menu.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\drawable_spinner_background.xml.flat",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\spinner_background.xml"
-    },
-    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\menu_nav_drawer_vendedor_menu.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\menu\\nav_drawer_vendedor_menu.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_fragment_mis_productos_vendedor.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_productos_vendedor.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_seleccion_usuario.xml.flat",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_seleccion_usuario.xml"
-    },
-    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_fragment_mis_pedidos_cliente.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_mis_pedidos_cliente.xml"
+    },
+    {
+        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_seleccion_usuario.xml.flat",
+        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_seleccion_usuario.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-xhdpi_ic_icono_round.webp.flat",
@@ -278,10 +274,6 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_main_vendedor.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_main_vendedor.xml"
-    },
-    {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_spinner_item_closed.xml.flat",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\spinner_item_closed.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-anydpi-v26_ic_icono.xml.flat",

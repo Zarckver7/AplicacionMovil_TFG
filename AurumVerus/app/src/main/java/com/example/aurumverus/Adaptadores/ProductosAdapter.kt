@@ -13,10 +13,11 @@ import com.example.aurumverus.modelos.Producto
 class ProductosAdapter(private val productos: List<Producto>) :
     RecyclerView.Adapter<ProductosAdapter.ProductoViewHolder>() {
 
-    class ProductoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgProducto: ImageView = view.findViewById(R.id.imgProducto)
-        val tvNombre: TextView = view.findViewById(R.id.tvNombreProducto)
-        val tvPrecio: TextView = view.findViewById(R.id.tvPrecioProducto)
+    class ProductoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nombre: TextView = itemView.findViewById(R.id.tvNombreProducto)
+        val precio: TextView = itemView.findViewById(R.id.tvPrecioProducto)
+        val imagen: ImageView = itemView.findViewById(R.id.imgProducto)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
@@ -27,15 +28,16 @@ class ProductosAdapter(private val productos: List<Producto>) :
 
     override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
         val producto = productos[position]
-        holder.tvNombre.text = producto.nombre ?: ""
-        holder.tvPrecio.text = "€${producto.precio ?: "0.00"}"
+        holder.nombre.text = producto.nombre
+        holder.precio.text = "${producto.precio}€"
 
-        // Si más adelante tienes imagenes, puedes cargarlas aquí con Glide
-        // Glide.with(holder.itemView.context)
-        //     .load(producto.imagenUrl)
-        //     .placeholder(R.drawable.ic_placeholder)
-        //     .into(holder.imgProducto)
+        Glide.with(holder.itemView.context)
+            .load(producto.imagenPrincipal)
+            .placeholder(R.drawable.galeria)
+            .into(holder.imagen)
     }
+
+
 
     override fun getItemCount(): Int = productos.size
 }

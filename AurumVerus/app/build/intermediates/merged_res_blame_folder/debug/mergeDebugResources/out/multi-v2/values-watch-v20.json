@@ -4,7 +4,7 @@
             "outputFile": "com.example.aurumverus.app-mergeDebugResources-43:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\fa59b0bb72d116a5951d0fc81ddaea33\\transformed\\play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\db54a2565b311f102b8ce9a3392ae979\\transformed\\play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\e7462101801c562b5ee8ce514c3f9332\\transformed\\appcompat-1.7.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\ruizf\\.gradle\\caches\\transforms-4\\6994b4f0158349cb02eb8e037fd570d7\\transformed\\appcompat-1.7.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

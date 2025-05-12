@@ -20,6 +20,7 @@ import com.example.aurumverus.databinding.ActivityAgregarProductoBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.storage.FirebaseStorage
 
 class AgregarProductoActivity : AppCompatActivity() {
 
@@ -73,21 +74,12 @@ class AgregarProductoActivity : AppCompatActivity() {
             "Bolsos y mochilas", "Joyería", "Consolas y videojuegos", "Perfumería", "Libros", "Otros"
         )
 
-        val adapter = ArrayAdapter(
-            this,
-            R.layout.spinner_item_dropdown,
-            categorias
-        )
-
+        val adapter = ArrayAdapter(this, R.layout.spinner_item_dropdown, categorias)
         binding.autoCategoria.setAdapter(adapter)
-
         binding.autoCategoria.setOnTouchListener { _, _ ->
             binding.autoCategoria.showDropDown()
-            false // permite que el clic se propague normalmente
+            false
         }
-
-
-
     }
 
     private fun cargarImagenes() {
@@ -100,9 +92,7 @@ class AgregarProductoActivity : AppCompatActivity() {
             .crop()
             .compress(maxSize = 1024)
             .maxResultSize(1080, 1080)
-            .createIntent { intent ->
-                resultadoImagen.launch(intent)
-            }
+            .createIntent { intent -> resultadoImagen.launch(intent) }
     }
 
     private val resultadoImagen =
@@ -112,8 +102,8 @@ class AgregarProductoActivity : AppCompatActivity() {
                 imagenUri = data?.data
                 val tiempo = Constantes().tiempoD()
 
-                val modeloImagenSeleccionada = ImagenSeleccionada(tiempo, imagenUri, null, false)
-                imagenSeleccionadaArrayList.add(modeloImagenSeleccionada)
+                val modelo = ImagenSeleccionada(tiempo, imagenUri, null, false)
+                imagenSeleccionadaArrayList.add(modelo)
                 cargarImagenes()
             } else {
                 Toast.makeText(this, "No se seleccionó ninguna imagen", Toast.LENGTH_SHORT).show()
@@ -124,22 +114,17 @@ class AgregarProductoActivity : AppCompatActivity() {
         nombreP = binding.edtxNombreProd.text.toString().trim()
         descripcionP = binding.edtxDescripcionProd.text.toString().trim()
         precioP = binding.edtxPrecio.text.toString().trim()
-        val categoriaSeleccionada = binding.autoCategoria.text.toString().trim()
+        categoriaP = binding.autoCategoria.text.toString().trim()
 
         if (nombreP.isEmpty()) {
             binding.edtxNombreProd.error = "Ingrese el nombre del producto"
-            binding.edtxNombreProd.requestFocus()
         } else if (descripcionP.isEmpty()) {
-            binding.edtxDescripcionProd.error = "Ingrese la descripción del producto"
-            binding.edtxDescripcionProd.requestFocus()
+            binding.edtxDescripcionProd.error = "Ingrese la descripción"
         } else if (precioP.isEmpty()) {
-            binding.edtxPrecio.error = "Ingrese el precio del producto"
-            binding.edtxPrecio.requestFocus()
-        }else if (categoriaSeleccionada.isEmpty()) {
+            binding.edtxPrecio.error = "Ingrese el precio"
+        } else if (categoriaP.isEmpty()) {
             Toast.makeText(this, "Seleccione una categoría", Toast.LENGTH_SHORT).show()
-            return
-        }
-        else {
+        } else {
             obtenerNombreVendedorYAgregar()
         }
     }
@@ -151,7 +136,7 @@ class AgregarProductoActivity : AppCompatActivity() {
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     nombreVendedor = snapshot.child("nombre").value?.toString() ?: "Desconocido"
-                    agregarProducto(uid)
+                    subirImagenesYGuardarProducto(uid)
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -160,33 +145,64 @@ class AgregarProductoActivity : AppCompatActivity() {
             })
     }
 
-    private fun agregarProducto(uid: String) {
-        progressDialog.setMessage("Agregando producto")
+    private fun subirImagenesYGuardarProducto(uid: String) {
+        progressDialog.setMessage("Subiendo imágenes...")
         progressDialog.show()
 
-        val ref = FirebaseDatabase.getInstance().getReference("Productos")
-        val idProducto = ref.push().key ?: return
+        val refStorage = FirebaseStorage.getInstance().reference.child("Productos")
+        val refDB = FirebaseDatabase.getInstance().getReference("Productos")
+        val idProducto = refDB.push().key ?: return
 
-        val hashMap = HashMap<String, Any>()
-        hashMap["idProducto"] = idProducto
-        hashMap["nombre"] = nombreP
-        hashMap["descripcion"] = descripcionP
-        hashMap["precio"] = precioP
-        hashMap["categoria"] = categoriaP
-        hashMap["uid"] = uid
-        hashMap["nombreVendedor"] = nombreVendedor
-        hashMap["horaCreacion"] = horaBD
+        val uploadTasks = mutableListOf<com.google.android.gms.tasks.Task<Uri>>()
 
-        ref.child(idProducto)
-            .setValue(hashMap)
-            .addOnSuccessListener {
-                progressDialog.dismiss()
-                Toast.makeText(this, "Producto agregado correctamente", Toast.LENGTH_SHORT).show()
-                limpiarCampos()
+        imagenSeleccionadaArrayList.forEachIndexed { index, imagen ->
+            val uri = imagen.imageUri ?: return@forEachIndexed
+
+            val nombreImagen = "${idProducto}_${index}_${System.currentTimeMillis()}.jpg"
+            val refImg = refStorage.child(nombreImagen)
+
+            val uploadTask = refImg.putFile(uri)
+                .continueWithTask { task ->
+                    if (!task.isSuccessful) {
+                        throw task.exception ?: Exception("Error al subir imagen")
+                    }
+                    refImg.downloadUrl
+                }
+
+            uploadTasks.add(uploadTask)
+        }
+
+        com.google.android.gms.tasks.Tasks.whenAllSuccess<Uri>(uploadTasks)
+            .addOnSuccessListener { urls ->
+                val imagenesUrls = urls.map { it.toString() }
+                val imagenPrincipal = imagenesUrls.firstOrNull() ?: ""
+
+                val hashMap = HashMap<String, Any>()
+                hashMap["idProducto"] = idProducto
+                hashMap["nombre"] = nombreP
+                hashMap["descripcion"] = descripcionP
+                hashMap["precio"] = precioP
+                hashMap["categoria"] = categoriaP
+                hashMap["uid"] = uid
+                hashMap["nombreVendedor"] = nombreVendedor
+                hashMap["horaCreacion"] = horaBD
+                hashMap["imagenPrincipal"] = imagenPrincipal
+                hashMap["imagenes"] = imagenesUrls
+
+                refDB.child(idProducto).setValue(hashMap)
+                    .addOnSuccessListener {
+                        progressDialog.dismiss()
+                        Toast.makeText(this, "Producto agregado correctamente", Toast.LENGTH_SHORT).show()
+                        limpiarCampos()
+                    }
+                    .addOnFailureListener { e ->
+                        progressDialog.dismiss()
+                        Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
+                    }
             }
             .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error al subir las imágenes: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

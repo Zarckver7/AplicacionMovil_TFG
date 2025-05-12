@@ -33,11 +33,11 @@
     <string name="edtxNotaDesc">Ej: 10% descuento</string>
     <string name="edtxPrecio">Precio</string>
     <string name="edtxPrecioDesc">Precio con descuento</string>
-    <string name="gcm_defaultSenderId" translatable="false">461278668917</string>
-    <string name="google_api_key" translatable="false">AIzaSyBbSu2Yy8NkjWoZ62i4WEsBv1DGciydTMg</string>
-    <string name="google_app_id" translatable="false">1:461278668917:android:cef9e1f823642e60cf303c</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBbSu2Yy8NkjWoZ62i4WEsBv1DGciydTMg</string>
-    <string name="google_storage_bucket" translatable="false">aurum-verus.firebasestorage.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">404894332729</string>
+    <string name="google_api_key" translatable="false">AIzaSyDGXksJPEBp2LHyk3qCZuZDN_blP84o7wQ</string>
+    <string name="google_app_id" translatable="false">1:404894332729:android:387ff13d3095502e625ae8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDGXksJPEBp2LHyk3qCZuZDN_blP84o7wQ</string>
+    <string name="google_storage_bucket" translatable="false">aurum-verus-tfg.firebasestorage.app</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="op_cerrar_seseion_c">Cerrar Sesión</string>
     <string name="op_cerrar_seseion_v">Cerrar Sesión</string>
@@ -51,7 +51,7 @@
     <string name="op_resena_v">Reseñas</string>
     <string name="op_tienda_c">Tienda</string>
     <string name="open_drawer">Open drawer</string>
-    <string name="project_id" translatable="false">aurum-verus</string>
+    <string name="project_id" translatable="false">aurum-verus-tfg</string>
     <string name="tipoCliente">Soy Cliente</string>
     <string name="tipoVendedor">Soy Vendedor</string>
     <string name="tvRegistrarseC">Registrarse ahora</string>

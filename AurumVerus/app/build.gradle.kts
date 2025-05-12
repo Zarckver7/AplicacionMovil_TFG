@@ -52,7 +52,8 @@ dependencies {
     implementation(libs.firebaseAuth)/*Autentificacion con base de datos*/
     implementation(libs.firebaseDatabase)/*Base de datos*/
     implementation(libs.imagePicker)/*Recortar/Modificar Imagenes*/
-    implementation(libs.glide)/*Lee Imagenes*/
+    implementation(libs.glide)
+    implementation(libs.firebase.storage.ktx)/*Lee Imagenes*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
