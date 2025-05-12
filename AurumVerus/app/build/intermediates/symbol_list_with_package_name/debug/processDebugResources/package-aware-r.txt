@@ -3185,6 +3185,8 @@ drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
 drawable ico_inicio
+drawable ico_marcador_no_portada
+drawable ico_marcador_portada
 drawable ico_mi_tienda
 drawable ico_mis_pedidos
 drawable ico_mis_productos
@@ -3409,8 +3411,12 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnAgregarImagen
 id btnAgregarProd
+id btnEliminar
+id btnGuardarCambios
 id btnLoginV
+id btnPortada
 id btnRegistrarC
 id btnRegistrarV
 id btnSeleccionarCliente
@@ -3492,6 +3498,9 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edDescripcion
+id edNombre
+id edPrecio
 id edge
 id edit_query
 id edit_text_id
@@ -3568,6 +3577,7 @@ id imagenRL
 id imagenesProductos
 id imgAgregarProd
 id imgProducto
+id imgVista
 id immediateStop
 id included
 id indeterminate
@@ -3741,6 +3751,7 @@ id right_side
 id rotate_scroll_wheel
 id rounded
 id row_index_key
+id rvImagenes
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3783,6 +3794,7 @@ id software
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerCategoria
 id spline
 id split_action_bar
 id spread
@@ -4017,6 +4029,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_agregar_producto
+layout activity_editar_producto
 layout activity_login_cliente
 layout activity_login_vendedor
 layout activity_main_cliente
@@ -4056,6 +4069,7 @@ layout fragment_tienda_cliente
 layout imagenes_elegidas
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_imagen_editable
 layout item_producto
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

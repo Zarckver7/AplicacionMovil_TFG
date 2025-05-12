@@ -28,6 +28,9 @@
             android:name=".SeleccionUsuarioActivity"
             android:exported="false" />
         <activity
+            android:name=".Vendedor.Productos.EditarProductoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Cliente.LoginClienteActivity"
             android:exported="false" />
         <activity

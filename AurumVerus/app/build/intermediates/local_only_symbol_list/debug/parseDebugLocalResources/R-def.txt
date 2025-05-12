@@ -20,6 +20,8 @@ drawable galeria
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ico_inicio
+drawable ico_marcador_no_portada
+drawable ico_marcador_portada
 drawable ico_mi_tienda
 drawable ico_mis_pedidos
 drawable ico_mis_productos
@@ -40,14 +42,21 @@ id autoCategoria
 id bottomAppBar
 id bottomFragment
 id bottonNavigation
+id btnAgregarImagen
 id btnAgregarProd
+id btnEliminar
+id btnGuardarCambios
 id btnLoginV
+id btnPortada
 id btnRegistrarC
 id btnRegistrarV
 id btnSeleccionarCliente
 id btnSeleccionarVendedor
 id cancelar
 id drawerLayout
+id edDescripcion
+id edNombre
+id edPrecio
 id edtxConContraseñaC
 id edtxConContraseñaV
 id edtxContraseñaC
@@ -64,6 +73,7 @@ id imagenRL
 id imagenesProductos
 id imgAgregarProd
 id imgProducto
+id imgVista
 id main
 id navFragment
 id navigationView
@@ -79,6 +89,8 @@ id op_pedidos_v
 id op_resena_v
 id op_tienda_c
 id productosRecyclerView
+id rvImagenes
+id spinnerCategoria
 id subirImg
 id toolbar
 id toolbarRL
@@ -87,6 +99,7 @@ id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
 layout activity_agregar_producto
+layout activity_editar_producto
 layout activity_login_cliente
 layout activity_login_vendedor
 layout activity_main_cliente
@@ -105,6 +118,7 @@ layout fragment_pedidos_vendedor
 layout fragment_resena
 layout fragment_tienda_cliente
 layout imagenes_elegidas
+layout item_imagen_editable
 layout item_producto
 layout nav_header_cliente
 layout nav_header_vendedor

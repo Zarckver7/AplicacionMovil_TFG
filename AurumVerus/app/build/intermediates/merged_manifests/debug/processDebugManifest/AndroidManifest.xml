@@ -55,6 +55,9 @@
             android:name="com.example.aurumverus.SeleccionUsuarioActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.aurumverus.Vendedor.Productos.EditarProductoActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.aurumverus.Cliente.LoginClienteActivity"
             android:exported="false" />
         <activity

@@ -102,7 +102,7 @@ class AgregarProductoActivity : AppCompatActivity() {
                 imagenUri = data?.data
                 val tiempo = Constantes().tiempoD()
 
-                val modelo = ImagenSeleccionada(tiempo, imagenUri, null, false)
+                val modelo = ImagenSeleccionada(tiempo, imagenUri, null, false, false)
                 imagenSeleccionadaArrayList.add(modelo)
                 cargarImagenes()
             } else {

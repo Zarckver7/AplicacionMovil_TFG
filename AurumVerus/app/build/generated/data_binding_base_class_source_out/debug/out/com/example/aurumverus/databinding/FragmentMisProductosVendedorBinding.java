@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,14 +22,10 @@ public final class FragmentMisProductosVendedorBinding implements ViewBinding {
   @NonNull
   public final RecyclerView productosRecyclerView;
 
-  @NonNull
-  public final RelativeLayout toolbarRL;
-
   private FragmentMisProductosVendedorBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView productosRecyclerView, @NonNull RelativeLayout toolbarRL) {
+      @NonNull RecyclerView productosRecyclerView) {
     this.rootView = rootView;
     this.productosRecyclerView = productosRecyclerView;
-    this.toolbarRL = toolbarRL;
   }
 
   @Override
@@ -66,14 +61,7 @@ public final class FragmentMisProductosVendedorBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.toolbarRL;
-      RelativeLayout toolbarRL = ViewBindings.findChildViewById(rootView, id);
-      if (toolbarRL == null) {
-        break missingId;
-      }
-
-      return new FragmentMisProductosVendedorBinding((FrameLayout) rootView, productosRecyclerView,
-          toolbarRL);
+      return new FragmentMisProductosVendedorBinding((FrameLayout) rootView, productosRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
