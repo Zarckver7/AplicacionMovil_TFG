@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar por categoría"
+        style="@style/TextAppearance.AppCompat.Medium" />
+
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar por vendedor"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerVendedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio mínimo"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/precioMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio máximo"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/precioMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnAplicarFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplicar filtros"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

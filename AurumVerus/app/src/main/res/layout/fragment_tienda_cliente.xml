@@ -1,17 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Cliente.Botton_Nav_Fragments_Cliente.FragmentTiendaCliente">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TIENDA"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/>/>
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="60dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/btnFiltros"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/negro_claro"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ico_filtro"
+                android:contentDescription="Filtro" />
+
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:queryHint="@string/buscar"
+                android:background="@color/negro_claro"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProductosCliente"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>

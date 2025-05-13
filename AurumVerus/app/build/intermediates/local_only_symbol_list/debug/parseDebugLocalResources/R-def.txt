@@ -21,6 +21,7 @@ drawable cliente
 drawable galeria
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ico_filtro
 drawable ico_inicio
 drawable ico_marcador_no_portada
 drawable ico_marcador_portada
@@ -46,8 +47,10 @@ id bottomFragment
 id bottonNavigation
 id btnAgregarImagen
 id btnAgregarProd
+id btnAplicarFiltros
 id btnEliminar
 id btnEliminarProducto
+id btnFiltros
 id btnGuardarCambios
 id btnLoginV
 id btnPortada
@@ -91,9 +94,14 @@ id op_mis_productos_v
 id op_pedidos_v
 id op_resena_v
 id op_tienda_c
+id precioMax
+id precioMin
 id productosRecyclerView
+id recyclerProductosCliente
 id rvImagenes
+id searchView
 id spinnerCategoria
+id spinnerVendedor
 id subirImg
 id toolbar
 id toolbarRL
@@ -101,6 +109,9 @@ id tvNombreProducto
 id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
+id txtNombre
+id txtPrecio
+id txtVendedor
 layout activity_agregar_producto
 layout activity_editar_producto
 layout activity_login_cliente
@@ -112,6 +123,7 @@ layout activity_registro_vendedor
 layout activity_seleccion_usuario
 layout activity_splash_screen
 layout app_barra_main
+layout bottomsheet_filtros
 layout fragment_inicio_cliente
 layout fragment_inicio_vendedor
 layout fragment_mi_perfil_cliente
@@ -123,6 +135,7 @@ layout fragment_tienda_cliente
 layout imagenes_elegidas
 layout item_imagen_editable
 layout item_producto
+layout item_producto_cliente
 layout nav_header_cliente
 layout nav_header_vendedor
 layout nav_principal_cliente
@@ -139,10 +152,14 @@ mipmap ic_launcher_round
 string app_name
 string bienbenida
 string btnAgregarProd
+string btnComprar
+string btnFiltros
 string btnLoginC
 string btnLoginV
 string btnRegistrarC
 string btnRegistrarV
+string btnVerMenos
+string buscar
 string categoria
 string close_drawer
 string edtxConContraseñaC

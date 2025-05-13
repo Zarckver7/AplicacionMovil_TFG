@@ -4,25 +4,44 @@ package com.example.aurumverus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.aurumverus.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentTiendaClienteBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayout rootView;
 
-  private FragmentTiendaClienteBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final ImageButton btnFiltros;
+
+  @NonNull
+  public final RecyclerView recyclerProductosCliente;
+
+  @NonNull
+  public final SearchView searchView;
+
+  private FragmentTiendaClienteBinding(@NonNull LinearLayout rootView,
+      @NonNull ImageButton btnFiltros, @NonNull RecyclerView recyclerProductosCliente,
+      @NonNull SearchView searchView) {
     this.rootView = rootView;
+    this.btnFiltros = btnFiltros;
+    this.recyclerProductosCliente = recyclerProductosCliente;
+    this.searchView = searchView;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +62,32 @@ public final class FragmentTiendaClienteBinding implements ViewBinding {
 
   @NonNull
   public static FragmentTiendaClienteBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnFiltros;
+      ImageButton btnFiltros = ViewBindings.findChildViewById(rootView, id);
+      if (btnFiltros == null) {
+        break missingId;
+      }
 
-    return new FragmentTiendaClienteBinding((FrameLayout) rootView);
+      id = R.id.recyclerProductosCliente;
+      RecyclerView recyclerProductosCliente = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerProductosCliente == null) {
+        break missingId;
+      }
+
+      id = R.id.searchView;
+      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      if (searchView == null) {
+        break missingId;
+      }
+
+      return new FragmentTiendaClienteBinding((LinearLayout) rootView, btnFiltros,
+          recyclerProductosCliente, searchView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

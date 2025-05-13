@@ -66,6 +66,12 @@
     <string name="edtxNotaDesc">Ej: 10% descuento</string>
     <string name="btnAgregarProd">Agregar Producto</string>
 
+    <!--Tienda Cliente-->
+    <string name="btnComprar">Comprar</string>
+    <string name="buscar">Buscar producto...</string>
+    <string name="btnVerMenos">Ver menos</string>
+    <string name="btnFiltros">Filtros</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

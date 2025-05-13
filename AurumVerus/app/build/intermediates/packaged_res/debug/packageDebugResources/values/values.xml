@@ -16,10 +16,14 @@
     <string name="app_name">Aurum Verus</string>
     <string name="bienbenida">Bienvenido a Aurum Verus</string>
     <string name="btnAgregarProd">Agregar Producto</string>
+    <string name="btnComprar">Comprar</string>
+    <string name="btnFiltros">Filtros</string>
     <string name="btnLoginC">Iniciar Sesión</string>
     <string name="btnLoginV">Iniciar Sesión</string>
     <string name="btnRegistrarC">Registrarme</string>
     <string name="btnRegistrarV">Registrarme</string>
+    <string name="btnVerMenos">Ver menos</string>
+    <string name="buscar">Buscar producto...</string>
     <string name="categoria">Categoría</string>
     <string name="close_drawer">Close drawer</string>
     <string name="edtxConContraseñaC">Confirmar Contraseña</string>

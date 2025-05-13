@@ -3186,6 +3186,7 @@ drawable ic_password
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
+drawable ico_filtro
 drawable ico_inicio
 drawable ico_marcador_no_portada
 drawable ico_marcador_portada
@@ -3415,8 +3416,10 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnAgregarImagen
 id btnAgregarProd
+id btnAplicarFiltros
 id btnEliminar
 id btnEliminarProducto
+id btnFiltros
 id btnGuardarCambios
 id btnLoginV
 id btnPortada
@@ -3736,6 +3739,8 @@ id percent
 id pin
 id position
 id postLayout
+id precioMax
+id precioMin
 id pressed
 id productosRecyclerView
 id progress_circular
@@ -3743,6 +3748,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerProductosCliente
 id report_drawn
 id restart
 id reverse
@@ -3766,6 +3772,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -3798,6 +3805,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerCategoria
+id spinnerVendedor
 id spline
 id split_action_bar
 id spread
@@ -3882,6 +3890,9 @@ id tvNombreProducto
 id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
+id txtNombre
+id txtPrecio
+id txtVendedor
 id ucrop
 id ucrop_frame
 id ucrop_photobox
@@ -4042,6 +4053,7 @@ layout activity_registro_vendedor
 layout activity_seleccion_usuario
 layout activity_splash_screen
 layout app_barra_main
+layout bottomsheet_filtros
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4074,6 +4086,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_imagen_editable
 layout item_producto
+layout item_producto_cliente
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4199,10 +4212,14 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string btnAgregarProd
+string btnComprar
+string btnFiltros
 string btnLoginC
 string btnLoginV
 string btnRegistrarC
 string btnRegistrarV
+string btnVerMenos
+string buscar
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
