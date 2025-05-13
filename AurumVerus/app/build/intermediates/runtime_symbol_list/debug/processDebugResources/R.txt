@@ -3422,6 +3422,7 @@ int id btnFiltros 0x7f08007d
 int id btnGuardarCambios 0x7f08007e
 int id btnLoginV 0x7f08007f
 int id btnPortada 0x7f080080
+int id btnRealizarPedido 0x7f080278
 int id btnRegistrarC 0x7f080081
 int id btnRegistrarV 0x7f080082
 int id btnSeleccionarCliente 0x7f080083
@@ -3509,6 +3510,7 @@ int id edPrecio 0x7f0800d4
 int id edge 0x7f0800d5
 int id edit_query 0x7f0800d6
 int id edit_text_id 0x7f0800d7
+int id edtComentario 0x7f08027f
 int id edtxConContraseñaC 0x7f0800d8
 int id edtxConContraseñaV 0x7f0800d9
 int id edtxContraseñaC 0x7f0800da
@@ -3573,6 +3575,7 @@ int id ifRoom 0x7f080114
 int id ignore 0x7f080115
 int id ignoreRequest 0x7f080116
 int id image 0x7f080117
+int id imageCarrusel 0x7f08027a
 int id image_view_crop 0x7f080118
 int id image_view_logo 0x7f080119
 int id image_view_state_aspect_ratio 0x7f08011a
@@ -3889,8 +3892,11 @@ int id tvNombreProducto 0x7f080250
 int id tvPrecioProducto 0x7f080251
 int id tvRegistrarseC 0x7f080252
 int id tvRegistrarseV 0x7f080253
+int id txtDescripcionDetalle 0x7f08027b
 int id txtNombre 0x7f080254
+int id txtNombreDetalle 0x7f08027c
 int id txtPrecio 0x7f080255
+int id txtPrecioDetalle 0x7f08027d
 int id txtVendedor 0x7f080256
 int id ucrop 0x7f080257
 int id ucrop_frame 0x7f080258
@@ -3902,6 +3908,7 @@ int id up 0x7f08025d
 int id useLogo 0x7f08025e
 int id vertical 0x7f08025f
 int id vertical_only 0x7f080260
+int id viewPagerImagenes 0x7f08027e
 int id view_offset_helper 0x7f080261
 int id view_overlay 0x7f080262
 int id view_transition 0x7f080263
@@ -4053,6 +4060,7 @@ int layout activity_seleccion_usuario 0x7f0b0024
 int layout activity_splash_screen 0x7f0b0025
 int layout app_barra_main 0x7f0b0026
 int layout bottomsheet_filtros 0x7f0b0027
+int layout bottomsheet_realizar_pedido 0x7f0b0091
 int layout browser_actions_context_menu_page 0x7f0b0028
 int layout browser_actions_context_menu_row 0x7f0b0029
 int layout custom_dialog 0x7f0b002a
@@ -4083,6 +4091,7 @@ int layout fragment_tienda_cliente 0x7f0b0042
 int layout imagenes_elegidas 0x7f0b0043
 int layout ime_base_split_test_activity 0x7f0b0044
 int layout ime_secondary_split_test_activity 0x7f0b0045
+int layout item_imagen_carrusel 0x7f0b0092
 int layout item_imagen_editable 0x7f0b0046
 int layout item_producto 0x7f0b0047
 int layout item_producto_cliente 0x7f0b0048

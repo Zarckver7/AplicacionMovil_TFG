@@ -3423,6 +3423,7 @@ id btnFiltros
 id btnGuardarCambios
 id btnLoginV
 id btnPortada
+id btnRealizarPedido
 id btnRegistrarC
 id btnRegistrarV
 id btnSeleccionarCliente
@@ -3510,6 +3511,7 @@ id edPrecio
 id edge
 id edit_query
 id edit_text_id
+id edtComentario
 id edtxConContraseñaC
 id edtxConContraseñaV
 id edtxContraseñaC
@@ -3574,6 +3576,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageCarrusel
 id image_view_crop
 id image_view_logo
 id image_view_state_aspect_ratio
@@ -3890,8 +3893,11 @@ id tvNombreProducto
 id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
+id txtDescripcionDetalle
 id txtNombre
+id txtNombreDetalle
 id txtPrecio
+id txtPrecioDetalle
 id txtVendedor
 id ucrop
 id ucrop_frame
@@ -3903,6 +3909,7 @@ id up
 id useLogo
 id vertical
 id vertical_only
+id viewPagerImagenes
 id view_offset_helper
 id view_overlay
 id view_transition
@@ -4054,6 +4061,7 @@ layout activity_seleccion_usuario
 layout activity_splash_screen
 layout app_barra_main
 layout bottomsheet_filtros
+layout bottomsheet_realizar_pedido
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4084,6 +4092,7 @@ layout fragment_tienda_cliente
 layout imagenes_elegidas
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_imagen_carrusel
 layout item_imagen_editable
 layout item_producto
 layout item_producto_cliente

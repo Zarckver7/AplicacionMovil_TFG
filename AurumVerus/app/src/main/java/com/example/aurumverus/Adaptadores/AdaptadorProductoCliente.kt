@@ -3,8 +3,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.aurumverus.Cliente.Dialogs.BottomSheetPedidoDialog
 import com.example.aurumverus.R
 import com.example.aurumverus.modelos.Producto
 
@@ -30,6 +32,14 @@ class AdaptadorProductoCliente(
         holder.txtNombre.text = producto.nombre
         holder.txtPrecio.text = "${producto.precio} €"
         holder.txtVendedor.text = "Vendedor: ${producto.nombreVendedor}"
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            if (context is FragmentActivity) {
+                val dialog = BottomSheetPedidoDialog(producto)
+                dialog.show(context.supportFragmentManager, "PedidoDialog")
+            }
+        }
+
 
         val imagen = producto.imagenPrincipal
         if (!imagen.isNullOrEmpty()) {
