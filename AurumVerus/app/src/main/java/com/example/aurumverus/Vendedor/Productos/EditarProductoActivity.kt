@@ -1,11 +1,13 @@
 package com.example.aurumverus.Vendedor.Productos
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -93,6 +95,18 @@ class EditarProductoActivity : AppCompatActivity() {
         binding.btnGuardarCambios.setOnClickListener {
             guardarCambios()
         }
+        binding.btnEliminarProducto.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Eliminar producto")
+                .setMessage("¿Estás seguro de que quieres eliminar este producto? Esta acción no se puede deshacer.")
+                .setPositiveButton("Eliminar") { _, _ ->
+                    eliminarProducto()
+                }
+                .setNegativeButton("Cancelar", null)
+                .show()
+        }
+
+
     }
 
     private fun setupUI() {
@@ -116,6 +130,10 @@ class EditarProductoActivity : AppCompatActivity() {
             "Bolsos y mochilas", "Joyería", "Consolas y videojuegos", "Perfumería", "Libros", "Otros"
         )
         val adapterSpinner = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, categorias)
+        binding.spinnerCategoria.setOnTouchListener { _, _ ->
+            binding.spinnerCategoria.showDropDown()
+            false
+        }
         binding.spinnerCategoria.setAdapter(adapterSpinner)
     }
 
@@ -240,4 +258,37 @@ class EditarProductoActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
             }
     }
+
+    private fun eliminarProducto() {
+        if (idProducto == null) {
+            Toast.makeText(this, "ID del producto no válido", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val ref = FirebaseDatabase.getInstance().getReference("Productos")
+        val refStorage = FirebaseStorage.getInstance().getReference("Productos")
+
+        productoActual?.imagenes?.forEach { url ->
+            if (url.isNotEmpty()) {
+                FirebaseStorage.getInstance().getReferenceFromUrl(url).delete()
+                    .addOnSuccessListener {
+                        Log.d("EliminarProducto", "Imagen eliminada correctamente")
+                    }
+                    .addOnFailureListener {
+                        Log.w("EliminarProducto", "No se pudo eliminar la imagen: ${it.message}")
+                    }
+            }
+        }
+
+        ref.child(idProducto!!).removeValue()
+            .addOnSuccessListener {
+                Toast.makeText(this, "Producto eliminado", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+
 }

@@ -2176,6 +2176,7 @@ color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color ripple_material_dark
 color ripple_material_light
+color rojo
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
@@ -2213,6 +2214,7 @@ color ucrop_color_widget_rotate_angle
 color ucrop_color_widget_rotate_mid_line
 color ucrop_color_widget_text
 color ucrop_scale_text_view_selector
+color verde
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3414,6 +3416,7 @@ id browser_actions_menu_view
 id btnAgregarImagen
 id btnAgregarProd
 id btnEliminar
+id btnEliminarProducto
 id btnGuardarCambios
 id btnLoginV
 id btnPortada

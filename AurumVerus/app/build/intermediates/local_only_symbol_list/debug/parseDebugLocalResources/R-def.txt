@@ -13,6 +13,8 @@ color ic_icono_background
 color naranja
 color negro
 color negro_claro
+color rojo
+color verde
 drawable agregar_producto
 drawable cancelar
 drawable cliente
@@ -45,6 +47,7 @@ id bottonNavigation
 id btnAgregarImagen
 id btnAgregarProd
 id btnEliminar
+id btnEliminarProducto
 id btnGuardarCambios
 id btnLoginV
 id btnPortada

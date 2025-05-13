@@ -4,11 +4,14 @@
     <color name="blanco">#FFFFFF</color>
     <color name="azul_marino">#2471A3</color>
     <color name="gris">#616161</color>
-    <color name="gris_claro">#BDBDBD</color>"
+    <color name="gris_claro">#BDBDBD</color>
     <color name="azul_claro">#03A9F4</color>
     <color name="dorado">#FFD700</color>
-    <color name="dorado_claro">#FFEE9C</color>"
+    <color name="dorado_claro">#FFEE9C</color>
     <color name="naranja">#FB8C00</color>
-    <color name="negro_claro">#212121</color>"
+    <color name="negro_claro">#212121</color>
+    <color name="rojo">#F44336</color>
+    <color name="verde">#43A047</color>
+
 
 </resources>

@@ -27,6 +27,9 @@ public final class ActivityEditarProductoBinding implements ViewBinding {
   public final Button btnAgregarImagen;
 
   @NonNull
+  public final MaterialButton btnEliminarProducto;
+
+  @NonNull
   public final MaterialButton btnGuardarCambios;
 
   @NonNull
@@ -45,11 +48,13 @@ public final class ActivityEditarProductoBinding implements ViewBinding {
   public final AutoCompleteTextView spinnerCategoria;
 
   private ActivityEditarProductoBinding(@NonNull RelativeLayout rootView,
-      @NonNull Button btnAgregarImagen, @NonNull MaterialButton btnGuardarCambios,
-      @NonNull EditText edDescripcion, @NonNull EditText edNombre, @NonNull EditText edPrecio,
-      @NonNull RecyclerView rvImagenes, @NonNull AutoCompleteTextView spinnerCategoria) {
+      @NonNull Button btnAgregarImagen, @NonNull MaterialButton btnEliminarProducto,
+      @NonNull MaterialButton btnGuardarCambios, @NonNull EditText edDescripcion,
+      @NonNull EditText edNombre, @NonNull EditText edPrecio, @NonNull RecyclerView rvImagenes,
+      @NonNull AutoCompleteTextView spinnerCategoria) {
     this.rootView = rootView;
     this.btnAgregarImagen = btnAgregarImagen;
+    this.btnEliminarProducto = btnEliminarProducto;
     this.btnGuardarCambios = btnGuardarCambios;
     this.edDescripcion = edDescripcion;
     this.edNombre = edNombre;
@@ -91,6 +96,12 @@ public final class ActivityEditarProductoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnEliminarProducto;
+      MaterialButton btnEliminarProducto = ViewBindings.findChildViewById(rootView, id);
+      if (btnEliminarProducto == null) {
+        break missingId;
+      }
+
       id = R.id.btnGuardarCambios;
       MaterialButton btnGuardarCambios = ViewBindings.findChildViewById(rootView, id);
       if (btnGuardarCambios == null) {
@@ -128,7 +139,8 @@ public final class ActivityEditarProductoBinding implements ViewBinding {
       }
 
       return new ActivityEditarProductoBinding((RelativeLayout) rootView, btnAgregarImagen,
-          btnGuardarCambios, edDescripcion, edNombre, edPrecio, rvImagenes, spinnerCategoria);
+          btnEliminarProducto, btnGuardarCambios, edDescripcion, edNombre, edPrecio, rvImagenes,
+          spinnerCategoria);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

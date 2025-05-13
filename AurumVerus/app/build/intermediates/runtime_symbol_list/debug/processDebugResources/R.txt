@@ -2175,6 +2175,7 @@ int color primary_text_disabled_material_dark 0x7f050313
 int color primary_text_disabled_material_light 0x7f050314
 int color ripple_material_dark 0x7f050315
 int color ripple_material_light 0x7f050316
+int color rojo 0x7f05033c
 int color secondary_text_default_material_dark 0x7f050317
 int color secondary_text_default_material_light 0x7f050318
 int color secondary_text_disabled_material_dark 0x7f050319
@@ -2212,6 +2213,7 @@ int color ucrop_color_widget_rotate_angle 0x7f050338
 int color ucrop_color_widget_rotate_mid_line 0x7f050339
 int color ucrop_color_widget_text 0x7f05033a
 int color ucrop_scale_text_view_selector 0x7f05033b
+int color verde 0x7f05033d
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -3413,6 +3415,7 @@ int id browser_actions_menu_view 0x7f080077
 int id btnAgregarImagen 0x7f080078
 int id btnAgregarProd 0x7f080079
 int id btnEliminar 0x7f08007a
+int id btnEliminarProducto 0x7f08026d
 int id btnGuardarCambios 0x7f08007b
 int id btnLoginV 0x7f08007c
 int id btnPortada 0x7f08007d
