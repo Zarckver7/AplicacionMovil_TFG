@@ -31,10 +31,18 @@ class AdaptadorProductoCliente(
         holder.txtPrecio.text = "${producto.precio} €"
         holder.txtVendedor.text = "Vendedor: ${producto.nombreVendedor}"
 
-        Glide.with(holder.itemView.context)
-            .load(producto.imagenPrincipal)
-            .into(holder.imgProducto)
+        val imagen = producto.imagenPrincipal
+        if (!imagen.isNullOrEmpty()) {
+            Glide.with(holder.itemView.context)
+                .load(imagen)
+                .placeholder(R.drawable.galeria)
+                .error(R.drawable.galeria)
+                .into(holder.imgProducto)
+        } else {
+            holder.imgProducto.setImageResource(R.drawable.galeria)
+        }
     }
+
 
     override fun getItemCount(): Int = listaProductos.size
 }
