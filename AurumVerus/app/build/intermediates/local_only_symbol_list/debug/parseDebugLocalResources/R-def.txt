@@ -50,6 +50,7 @@ id bottonNavigation
 id btnAgregarImagen
 id btnAgregarProd
 id btnAplicarFiltros
+id btnConfirmar
 id btnEliminar
 id btnEliminarProducto
 id btnFiltros
@@ -104,6 +105,7 @@ id precioMax
 id precioMin
 id productosRecyclerView
 id recyclerPedidosCliente
+id recyclerPedidosVendedor
 id recyclerProductosCliente
 id rvImagenes
 id searchView
@@ -116,8 +118,13 @@ id tvNombreProducto
 id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
+id txtCliente
+id txtComentario
 id txtDescripcionDetalle
+id txtDireccion
+id txtEstado
 id txtEstadoTexto
+id txtFecha
 id txtFechaPedido
 id txtNombre
 id txtNombreDetalle
@@ -152,6 +159,7 @@ layout imagenes_elegidas
 layout item_imagen_carrusel
 layout item_imagen_editable
 layout item_pedido_cliente
+layout item_pedido_vendedor
 layout item_producto
 layout item_producto_cliente
 layout nav_header_cliente

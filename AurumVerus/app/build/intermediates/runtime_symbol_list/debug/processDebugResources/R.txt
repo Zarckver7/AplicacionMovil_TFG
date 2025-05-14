@@ -3418,6 +3418,7 @@ int id browser_actions_menu_view 0x7f080077
 int id btnAgregarImagen 0x7f080078
 int id btnAgregarProd 0x7f080079
 int id btnAplicarFiltros 0x7f08007a
+int id btnConfirmar 0x7f080286
 int id btnEliminar 0x7f08007b
 int id btnEliminarProducto 0x7f08007c
 int id btnFiltros 0x7f08007d
@@ -3754,6 +3755,7 @@ int id radio 0x7f0801c3
 int id ratio 0x7f0801c4
 int id rectangles 0x7f0801c5
 int id recyclerPedidosCliente 0x7f080281
+int id recyclerPedidosVendedor 0x7f080287
 int id recyclerProductosCliente 0x7f0801c6
 int id report_drawn 0x7f0801c7
 int id restart 0x7f0801c8
@@ -3896,8 +3898,13 @@ int id tvNombreProducto 0x7f080250
 int id tvPrecioProducto 0x7f080251
 int id tvRegistrarseC 0x7f080252
 int id tvRegistrarseV 0x7f080253
+int id txtCliente 0x7f080288
+int id txtComentario 0x7f080289
 int id txtDescripcionDetalle 0x7f08027b
+int id txtDireccion 0x7f08028a
+int id txtEstado 0x7f08028b
 int id txtEstadoTexto 0x7f080285
+int id txtFecha 0x7f08028c
 int id txtFechaPedido 0x7f080282
 int id txtNombre 0x7f080254
 int id txtNombreDetalle 0x7f08027c
@@ -4102,6 +4109,7 @@ int layout ime_secondary_split_test_activity 0x7f0b0045
 int layout item_imagen_carrusel 0x7f0b0092
 int layout item_imagen_editable 0x7f0b0046
 int layout item_pedido_cliente 0x7f0b0093
+int layout item_pedido_vendedor 0x7f0b0094
 int layout item_producto 0x7f0b0047
 int layout item_producto_cliente 0x7f0b0048
 int layout m3_alert_dialog 0x7f0b0049

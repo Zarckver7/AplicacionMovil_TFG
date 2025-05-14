@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.aurumverus.R
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentMisProductosVendedor
-import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentPedidosVendedor
+import com.example.aurumverus.Vendedor.FragmentPedidosVendedor
 import com.example.aurumverus.Vendedor.Productos.AgregarProductoActivity
 import com.example.aurumverus.databinding.FragmentInicioVendedorBinding
 

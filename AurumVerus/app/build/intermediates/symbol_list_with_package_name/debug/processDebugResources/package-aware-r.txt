@@ -3419,6 +3419,7 @@ id browser_actions_menu_view
 id btnAgregarImagen
 id btnAgregarProd
 id btnAplicarFiltros
+id btnConfirmar
 id btnEliminar
 id btnEliminarProducto
 id btnFiltros
@@ -3755,6 +3756,7 @@ id radio
 id ratio
 id rectangles
 id recyclerPedidosCliente
+id recyclerPedidosVendedor
 id recyclerProductosCliente
 id report_drawn
 id restart
@@ -3897,8 +3899,13 @@ id tvNombreProducto
 id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
+id txtCliente
+id txtComentario
 id txtDescripcionDetalle
+id txtDireccion
+id txtEstado
 id txtEstadoTexto
+id txtFecha
 id txtFechaPedido
 id txtNombre
 id txtNombreDetalle
@@ -4103,6 +4110,7 @@ layout ime_secondary_split_test_activity
 layout item_imagen_carrusel
 layout item_imagen_editable
 layout item_pedido_cliente
+layout item_pedido_vendedor
 layout item_producto
 layout item_producto_cliente
 layout m3_alert_dialog

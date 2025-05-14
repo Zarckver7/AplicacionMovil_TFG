@@ -17,7 +17,6 @@ import androidx.fragment.app.Fragment
 import com.example.aurumverus.R
 import com.example.aurumverus.SeleccionUsuarioActivity
 import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentMisProductosVendedor
-import com.example.aurumverus.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentPedidosVendedor
 import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentInicioVendedor
 import com.example.aurumverus.Vendedor.Nav_Fragment_Vendedor.FragmentResena
 import com.example.aurumverus.databinding.ActivityMainVendedorBinding
