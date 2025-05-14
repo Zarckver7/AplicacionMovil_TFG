@@ -3186,6 +3186,7 @@ drawable ic_password
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
+drawable ico_confirmado
 drawable ico_filtro
 drawable ico_inicio
 drawable ico_marcador_no_portada
@@ -3197,6 +3198,7 @@ drawable ico_pedidos
 drawable ico_perfil
 drawable ico_resenas
 drawable ico_salir
+drawable ico_sin_confirmar
 drawable id_agregar
 drawable indeterminate_static
 drawable m3_avd_hide_password
@@ -3570,6 +3572,7 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
+id iconEstadoPedido
 id icon_group
 id icon_only
 id ifRoom
@@ -3751,6 +3754,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerPedidosCliente
 id recyclerProductosCliente
 id report_drawn
 id restart
@@ -3894,10 +3898,14 @@ id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
 id txtDescripcionDetalle
+id txtEstadoTexto
+id txtFechaPedido
 id txtNombre
 id txtNombreDetalle
+id txtNombreProducto
 id txtPrecio
 id txtPrecioDetalle
+id txtPrecioProducto
 id txtVendedor
 id ucrop
 id ucrop_frame
@@ -4094,6 +4102,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_imagen_carrusel
 layout item_imagen_editable
+layout item_pedido_cliente
 layout item_producto
 layout item_producto_cliente
 layout m3_alert_dialog

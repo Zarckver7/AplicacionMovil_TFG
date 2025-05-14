@@ -21,6 +21,7 @@ drawable cliente
 drawable galeria
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ico_confirmado
 drawable ico_filtro
 drawable ico_inicio
 drawable ico_marcador_no_portada
@@ -32,6 +33,7 @@ drawable ico_pedidos
 drawable ico_perfil
 drawable ico_resenas
 drawable ico_salir
+drawable ico_sin_confirmar
 drawable id_agregar
 drawable vendedor
 id TI_Categoria
@@ -77,6 +79,7 @@ id edtxNombreProd
 id edtxNombreV
 id edtxPrecio
 id group_op
+id iconEstadoPedido
 id imageCarrusel
 id imagenRL
 id imagenesProductos
@@ -100,6 +103,7 @@ id op_tienda_c
 id precioMax
 id precioMin
 id productosRecyclerView
+id recyclerPedidosCliente
 id recyclerProductosCliente
 id rvImagenes
 id searchView
@@ -113,10 +117,14 @@ id tvPrecioProducto
 id tvRegistrarseC
 id tvRegistrarseV
 id txtDescripcionDetalle
+id txtEstadoTexto
+id txtFechaPedido
 id txtNombre
 id txtNombreDetalle
+id txtNombreProducto
 id txtPrecio
 id txtPrecioDetalle
+id txtPrecioProducto
 id txtVendedor
 id viewPagerImagenes
 layout activity_agregar_producto
@@ -143,6 +151,7 @@ layout fragment_tienda_cliente
 layout imagenes_elegidas
 layout item_imagen_carrusel
 layout item_imagen_editable
+layout item_pedido_cliente
 layout item_producto
 layout item_producto_cliente
 layout nav_header_cliente

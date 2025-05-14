@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cliente.Botton_Nav_Fragments_Cliente.FragmentMisPedidosCliente">
+    android:padding="8dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPedidosCliente"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="MIS PEDIDOS"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/>
-
-</FrameLayout>
+        android:paddingTop="60dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"/>
+</LinearLayout>

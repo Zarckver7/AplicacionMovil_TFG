@@ -12,8 +12,8 @@ import com.example.aurumverus.R
 import com.example.aurumverus.Vendedor.Productos.EditarProductoActivity
 import com.example.aurumverus.modelos.Producto
 
-class ProductosAdapter(private val productos: List<Producto>) :
-    RecyclerView.Adapter<ProductosAdapter.ProductoViewHolder>() {
+class AdaptadorProductosVendedor(private val productos: List<Producto>) :
+    RecyclerView.Adapter<AdaptadorProductosVendedor.ProductoViewHolder>() {
 
     var onProductoLongClick: ((Producto) -> Unit)? = null
 

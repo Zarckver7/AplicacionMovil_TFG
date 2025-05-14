@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aurumverus.R
 import com.example.aurumverus.modelos.Producto
-import com.example.aurumverus.Adaptadores.ProductosAdapter
+import com.example.aurumverus.Adaptadores.AdaptadorProductosVendedor
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -17,7 +17,7 @@ class FragmentMisProductosVendedor : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var productosList: ArrayList<Producto>
-    private lateinit var adapter: ProductosAdapter
+    private lateinit var adapter: AdaptadorProductosVendedor
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class FragmentMisProductosVendedor : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         productosList = ArrayList()
-        adapter = ProductosAdapter(productosList)
+        adapter = AdaptadorProductosVendedor(productosList)
         recyclerView.adapter = adapter
 
         firebaseAuth = FirebaseAuth.getInstance()

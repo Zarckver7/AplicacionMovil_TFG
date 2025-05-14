@@ -3185,6 +3185,7 @@ int drawable ic_password 0x7f0700b5
 int drawable ic_photo_black_48dp 0x7f0700b6
 int drawable ic_photo_camera_black_48dp 0x7f0700b7
 int drawable ic_search_black_24 0x7f0700b8
+int drawable ico_confirmado 0x7f070125
 int drawable ico_filtro 0x7f0700b9
 int drawable ico_inicio 0x7f0700ba
 int drawable ico_marcador_no_portada 0x7f0700bb
@@ -3196,6 +3197,7 @@ int drawable ico_pedidos 0x7f0700c0
 int drawable ico_perfil 0x7f0700c1
 int drawable ico_resenas 0x7f0700c2
 int drawable ico_salir 0x7f0700c3
+int drawable ico_sin_confirmar 0x7f070126
 int drawable id_agregar 0x7f0700c4
 int drawable indeterminate_static 0x7f0700c5
 int drawable m3_avd_hide_password 0x7f0700c6
@@ -3569,6 +3571,7 @@ int id honorRequest 0x7f08010e
 int id horizontal 0x7f08010f
 int id horizontal_only 0x7f080110
 int id icon 0x7f080111
+int id iconEstadoPedido 0x7f080280
 int id icon_group 0x7f080112
 int id icon_only 0x7f080113
 int id ifRoom 0x7f080114
@@ -3750,6 +3753,7 @@ int id progress_horizontal 0x7f0801c2
 int id radio 0x7f0801c3
 int id ratio 0x7f0801c4
 int id rectangles 0x7f0801c5
+int id recyclerPedidosCliente 0x7f080281
 int id recyclerProductosCliente 0x7f0801c6
 int id report_drawn 0x7f0801c7
 int id restart 0x7f0801c8
@@ -3893,10 +3897,14 @@ int id tvPrecioProducto 0x7f080251
 int id tvRegistrarseC 0x7f080252
 int id tvRegistrarseV 0x7f080253
 int id txtDescripcionDetalle 0x7f08027b
+int id txtEstadoTexto 0x7f080285
+int id txtFechaPedido 0x7f080282
 int id txtNombre 0x7f080254
 int id txtNombreDetalle 0x7f08027c
+int id txtNombreProducto 0x7f080283
 int id txtPrecio 0x7f080255
 int id txtPrecioDetalle 0x7f08027d
+int id txtPrecioProducto 0x7f080284
 int id txtVendedor 0x7f080256
 int id ucrop 0x7f080257
 int id ucrop_frame 0x7f080258
@@ -4093,6 +4101,7 @@ int layout ime_base_split_test_activity 0x7f0b0044
 int layout ime_secondary_split_test_activity 0x7f0b0045
 int layout item_imagen_carrusel 0x7f0b0092
 int layout item_imagen_editable 0x7f0b0046
+int layout item_pedido_cliente 0x7f0b0093
 int layout item_producto 0x7f0b0047
 int layout item_producto_cliente 0x7f0b0048
 int layout m3_alert_dialog 0x7f0b0049
