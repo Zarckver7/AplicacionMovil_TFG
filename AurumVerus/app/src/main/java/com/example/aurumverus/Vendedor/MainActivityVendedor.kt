@@ -1,6 +1,7 @@
 package com.example.aurumverus.Vendedor
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
@@ -95,6 +96,9 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             R.id.op_resena_v -> {
                 replaceFragment(FragmentResena())
             }
+            R.id.op_soporte -> {
+                enviarCorreoSoporte()
+            }
             R.id.op_cerrar_seseion_v -> {
                 cerrarSeseion()
             }
@@ -109,4 +113,18 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    private fun enviarCorreoSoporte() {
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:soporte@aurumverus.com")
+            putExtra(Intent.EXTRA_SUBJECT, "Consulta desde la app (vendedor)")
+            putExtra(Intent.EXTRA_TEXT, "Hola, necesito ayuda con...")
+        }
+        try {
+            startActivity(Intent.createChooser(intent, "Enviar correo con..."))
+        } catch (e: Exception) {
+            Toast.makeText(this, "No se encontró una app de correo", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }

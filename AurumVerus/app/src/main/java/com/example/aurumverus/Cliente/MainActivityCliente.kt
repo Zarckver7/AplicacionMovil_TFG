@@ -1,6 +1,7 @@
 package com.example.aurumverus.Cliente
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
@@ -93,6 +94,9 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
             R.id.op_mi_perfil_c -> {
                 replaceFragment(FragmentMiPerfilCliente())
             }
+            R.id.op_soporte -> {
+                enviarCorreoSoporte()
+            }
             R.id.op_cerrar_seseion_c -> {
                 cerrarSeseion()
             }
@@ -106,4 +110,19 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    private fun enviarCorreoSoporte() {
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:aurumverus.info@gmail.com")
+            putExtra(Intent.EXTRA_SUBJECT, "Consulta desde la app (cliente)")
+            putExtra(Intent.EXTRA_TEXT, "Hola, tengo una duda sobre...")
+        }
+        try {
+            startActivity(Intent.createChooser(intent, "Enviar correo con..."))
+        } catch (e: Exception) {
+            Toast.makeText(this, "No se encontró una app de correo", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
 }

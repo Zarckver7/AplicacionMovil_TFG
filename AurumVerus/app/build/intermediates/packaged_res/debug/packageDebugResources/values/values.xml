@@ -55,6 +55,7 @@
     <string name="op_mis_pedidos_v">Pedidos</string>
     <string name="op_mis_productos_v">Mis productos</string>
     <string name="op_resena_v">Reseñas</string>
+    <string name="op_soporte">Soporte</string>
     <string name="op_tienda_c">Tienda</string>
     <string name="open_drawer">Open drawer</string>
     <string name="project_id" translatable="false">aurum-verus-tfg</string>

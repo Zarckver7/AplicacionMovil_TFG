@@ -1,17 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cliente.Nav_Fragment_Cliente.FragmentMiPerfilCliente">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:layout_marginTop="65dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="MIS PERFIL"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/> />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mi perfil"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Nombre"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/edtNombrePerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris"
+                    android:padding="12dp"
+                    android:textColor="@color/blanco"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:text="Dirección"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/edtDireccionPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/blanco" />
+
+                <TextView
+                    android:text="Teléfono"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/edtTelefonoPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:background="@color/gris"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/blanco" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnGuardarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar cambios"
+            android:textAllCaps="false"
+            android:textColor="@color/negro"
+            android:backgroundTint="@color/dorado"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

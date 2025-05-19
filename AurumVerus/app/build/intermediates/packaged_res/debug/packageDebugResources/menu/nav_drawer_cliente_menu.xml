@@ -21,6 +21,13 @@
             android:icon="@drawable/ico_perfil"
             />
 
+        <item
+            android:id="@+id/op_soporte"
+            android:title="@string/op_soporte"
+            android:icon="@drawable/ico_soporte">
+
+        </item>
+
     </group>
 
     <!--Cerrrar Sesión-->

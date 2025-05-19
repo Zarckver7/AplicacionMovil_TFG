@@ -34,6 +34,7 @@ drawable ico_perfil
 drawable ico_resenas
 drawable ico_salir
 drawable ico_sin_confirmar
+drawable ico_soporte
 drawable id_agregar
 drawable vendedor
 id TI_Categoria
@@ -55,6 +56,7 @@ id btnEliminar
 id btnEliminarProducto
 id btnFiltros
 id btnGuardarCambios
+id btnGuardarPerfil
 id btnLoginV
 id btnPortada
 id btnRealizarPedido
@@ -68,6 +70,9 @@ id edDescripcion
 id edNombre
 id edPrecio
 id edtComentario
+id edtDireccionPerfil
+id edtNombrePerfil
+id edtTelefonoPerfil
 id edtxConContraseñaC
 id edtxConContraseñaV
 id edtxContraseñaC
@@ -100,6 +105,8 @@ id op_mis_pedidos_c
 id op_mis_productos_v
 id op_pedidos_v
 id op_resena_v
+id op_soporte
+id op_soporte_v
 id op_tienda_c
 id precioMax
 id precioMin
@@ -217,6 +224,7 @@ string op_mis_pedidos_c
 string op_mis_pedidos_v
 string op_mis_productos_v
 string op_resena_v
+string op_soporte
 string op_tienda_c
 string open_drawer
 string project_id

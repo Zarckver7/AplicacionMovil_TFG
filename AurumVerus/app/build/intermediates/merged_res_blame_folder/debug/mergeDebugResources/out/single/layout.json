@@ -36,6 +36,10 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_pedidos_vendedor.xml"
     },
     {
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_mi_perfil_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mi_perfil_cliente.xml"
+    },
+    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\bottomsheet_filtros.xml",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\bottomsheet_filtros.xml"
     },
@@ -102,10 +106,6 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\imagenes_elegidas.xml",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\imagenes_elegidas.xml"
-    },
-    {
-        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_mis_pedidos_cliente.xml",
-        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_pedidos_cliente.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_resena.xml",

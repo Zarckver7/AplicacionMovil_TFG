@@ -111,7 +111,6 @@ class RegistroClienteActivity : AppCompatActivity() {
         datosC["nombre"] = "$nombreBD"
         datosC["correo"] = "$correoBD"
         datosC["tipoUsuario"] = "Cliente"
-        datosC["imagen"] = ""
         datosC["hora"] = horaBD
 
         val referenciaBD = FirebaseDatabase.getInstance().getReference("Usuarios")

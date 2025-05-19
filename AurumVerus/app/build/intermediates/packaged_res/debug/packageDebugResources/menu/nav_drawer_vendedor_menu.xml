@@ -20,6 +20,13 @@
 
         </item>
 
+        <item
+            android:id="@+id/op_soporte_v"
+            android:title="@string/op_soporte"
+            android:icon="@drawable/ico_soporte">
+
+        </item>
+
     </group>
 
     <item

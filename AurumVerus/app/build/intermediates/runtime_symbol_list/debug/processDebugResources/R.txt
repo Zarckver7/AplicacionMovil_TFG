@@ -3198,6 +3198,7 @@ int drawable ico_perfil 0x7f0700c1
 int drawable ico_resenas 0x7f0700c2
 int drawable ico_salir 0x7f0700c3
 int drawable ico_sin_confirmar 0x7f070126
+int drawable ico_soporte 0x7f070127
 int drawable id_agregar 0x7f0700c4
 int drawable indeterminate_static 0x7f0700c5
 int drawable m3_avd_hide_password 0x7f0700c6
@@ -3423,6 +3424,7 @@ int id btnEliminar 0x7f08007b
 int id btnEliminarProducto 0x7f08007c
 int id btnFiltros 0x7f08007d
 int id btnGuardarCambios 0x7f08007e
+int id btnGuardarPerfil 0x7f08028f
 int id btnLoginV 0x7f08007f
 int id btnPortada 0x7f080080
 int id btnRealizarPedido 0x7f080278
@@ -3514,6 +3516,9 @@ int id edge 0x7f0800d5
 int id edit_query 0x7f0800d6
 int id edit_text_id 0x7f0800d7
 int id edtComentario 0x7f08027f
+int id edtDireccionPerfil 0x7f080290
+int id edtNombrePerfil 0x7f080291
+int id edtTelefonoPerfil 0x7f080292
 int id edtxConContraseñaC 0x7f0800d8
 int id edtxConContraseñaV 0x7f0800d9
 int id edtxContraseñaC 0x7f0800da
@@ -3713,6 +3718,8 @@ int id op_mis_pedidos_c 0x7f080199
 int id op_mis_productos_v 0x7f08019a
 int id op_pedidos_v 0x7f08019b
 int id op_resena_v 0x7f08019c
+int id op_soporte 0x7f08028d
+int id op_soporte_v 0x7f08028e
 int id op_tienda_c 0x7f08019d
 int id open_search_bar_text_view 0x7f08019e
 int id open_search_view_background 0x7f08019f
@@ -4424,6 +4431,7 @@ int string op_mis_pedidos_c 0x7f1100e0
 int string op_mis_pedidos_v 0x7f1100e1
 int string op_mis_productos_v 0x7f1100e2
 int string op_resena_v 0x7f1100e3
+int string op_soporte 0x7f11010a
 int string op_tienda_c 0x7f1100e4
 int string open_drawer 0x7f1100e5
 int string password_toggle_content_description 0x7f1100e6

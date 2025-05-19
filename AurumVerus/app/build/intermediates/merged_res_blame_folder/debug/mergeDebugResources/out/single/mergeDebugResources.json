@@ -16,10 +16,6 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\nav_header_cliente.xml"
     },
     {
-        "merged": "com.example.aurumverus.app-debug-45:/layout_fragment_mis_pedidos_cliente.xml.flat",
-        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_pedidos_cliente.xml"
-    },
-    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -176,6 +172,10 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_registro_vendedor.xml"
     },
     {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_fragment_mi_perfil_cliente.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mi_perfil_cliente.xml"
+    },
+    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_activity_agregar_producto.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_agregar_producto.xml"
     },
@@ -254,6 +254,10 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\drawable_ico_soporte.xml.flat",
+        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\ico_soporte.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\layout_fragment_mis_pedidos_cliente.xml.flat",
