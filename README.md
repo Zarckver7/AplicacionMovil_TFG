@@ -25,7 +25,7 @@ La aplicación **Aurum Verus** permite a los vendedores gestionar su catálogo d
 
 ## 🗂️ Estructura del Proyecto
 
-```
+
 Cliente/
 Archivos relevantes con las funcionalidades del cliente como Inicio/Registro, compra de productos, etc
 
@@ -68,7 +68,7 @@ Almacenamiento de "constantes" de texto, color y demás que se usan en diferente
 /Gradle Scripts
 Almacena los archivos en los que se declaran las dependencias, las librerias y otros archivos
 
-
+---
 
 ## 🖥️ Requisitos del Sistema
 
