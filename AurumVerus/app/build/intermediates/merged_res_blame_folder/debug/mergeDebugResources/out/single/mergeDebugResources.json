@@ -184,10 +184,6 @@
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\menu\\botton_nav_bar_cliente_menu.xml"
     },
     {
-        "merged": "com.example.aurumverus.app-debug-45:/layout_fragment_resena.xml.flat",
-        "source": "com.example.aurumverus.app-main-47:/layout/fragment_resena.xml"
-    },
-    {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\drawable_agregar_producto.png.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\drawable\\agregar_producto.png"
     },
@@ -250,6 +246,10 @@
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\menu_nav_drawer_vendedor_menu.xml.flat",
         "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\menu\\nav_drawer_vendedor_menu.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-debug-45:/layout_fragment_mis_productos_vendedor.xml.flat",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_productos_vendedor.xml"
     },
     {
         "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",

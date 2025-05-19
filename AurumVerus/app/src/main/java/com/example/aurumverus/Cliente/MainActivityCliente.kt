@@ -115,7 +115,6 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
         val intent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:aurumverus.info@gmail.com")
             putExtra(Intent.EXTRA_SUBJECT, "Consulta desde la app (cliente)")
-            putExtra(Intent.EXTRA_TEXT, "Hola, tengo una duda sobre...")
         }
         try {
             startActivity(Intent.createChooser(intent, "Enviar correo con..."))

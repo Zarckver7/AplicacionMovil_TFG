@@ -96,7 +96,7 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             R.id.op_resena_v -> {
                 replaceFragment(FragmentResena())
             }
-            R.id.op_soporte -> {
+            R.id.op_soporte_v -> {
                 enviarCorreoSoporte()
             }
             R.id.op_cerrar_seseion_v -> {
@@ -116,9 +116,8 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
 
     private fun enviarCorreoSoporte() {
         val intent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:soporte@aurumverus.com")
+            data = Uri.parse("mailto:aurumverus.info@gmail.com")
             putExtra(Intent.EXTRA_SUBJECT, "Consulta desde la app (vendedor)")
-            putExtra(Intent.EXTRA_TEXT, "Hola, necesito ayuda con...")
         }
         try {
             startActivity(Intent.createChooser(intent, "Enviar correo con..."))

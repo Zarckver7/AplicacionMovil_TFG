@@ -3,8 +3,6 @@ local
 color azul_claro
 color azul_marino
 color blanco
-color color_switch
-color contorno_switch
 color dorado
 color dorado_claro
 color gris
