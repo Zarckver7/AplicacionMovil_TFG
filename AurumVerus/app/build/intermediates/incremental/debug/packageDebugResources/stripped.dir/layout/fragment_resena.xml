@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".Vendedor.Nav_Fragment_Vendedor.FragmentResena">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="RESEÑAS"
+        android:text="FUNCIÓN EN DESARROLLO"
         android:gravity="center"
         android:textSize="35dp"
         android:textStyle="bold"
+        android:padding="20dp"
         />
 
 </FrameLayout>
