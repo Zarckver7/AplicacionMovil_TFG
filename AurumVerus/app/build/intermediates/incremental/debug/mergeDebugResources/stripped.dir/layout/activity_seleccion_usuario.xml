@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SeleccionUsuarioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_icono_round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/bienbenida"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:text="@string/txtInicioSeleccion"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="160dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cliente"
+            />
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSeleccionarCliente"
+            android:text="@string/tipoCliente"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dorado"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/vendedor"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSeleccionarVendedor"
+            android:text="@string/tipoVendedor"
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dorado"
+            />
+        
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    
+
+
+</RelativeLayout>

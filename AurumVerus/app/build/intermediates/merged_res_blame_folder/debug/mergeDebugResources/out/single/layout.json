@@ -1,134 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_producto_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_producto_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_login_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_login_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\app_barra_main.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\app_barra_main.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_imagen_editable.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_imagen_editable.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_splash_screen.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_splash_screen.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_tienda_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_tienda_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\nav_header_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\nav_header_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_login_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_login_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_registro_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_registro_cliente.xml"
-    },
-    {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_producto.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_producto.xml"
-    },
-    {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_main_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_main_cliente.xml"
-    },
-    {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\nav_header_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\nav_header_cliente.xml"
-    },
-    {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_pedidos_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_pedidos_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_mis_productos_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_productos_vendedor.xml"
     },
     {
         "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_mi_perfil_cliente.xml",
         "source": "com.example.aurumverus.app-main-47:/layout/fragment_mi_perfil_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\bottomsheet_filtros.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\bottomsheet_filtros.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_seleccion_usuario.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_seleccion_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\spinner_item_dropdown.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\spinner_item_dropdown.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_main_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_main_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_mis_pedidos_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_mis_pedidos_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/bottomsheet_filtros.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/bottomsheet_filtros.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\nav_principal_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\nav_principal_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_producto_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_producto_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_mi_perfil_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_mi_perfil_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_pedido_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_pedido_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_seleccion_usuario.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_seleccion_usuario.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/spinner_item_dropdown.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/spinner_item_dropdown.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_login_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_login_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/app_barra_main.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/app_barra_main.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_imagen_editable.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_imagen_editable.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/nav_header_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/nav_header_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_main_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_main_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_main_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_main_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_agregar_producto.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_agregar_producto.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_pedidos_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_pedidos_vendedor.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_imagen_carrusel.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_imagen_carrusel.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_pedido_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_pedido_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_pedido_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_pedido_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_splash_screen.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\bottomsheet_realizar_pedido.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\bottomsheet_realizar_pedido.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_inicio_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_inicio_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_login_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_login_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/imagenes_elegidas.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/imagenes_elegidas.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_tienda_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_tienda_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/nav_principal_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/nav_principal_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_registro_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_registro_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_resena.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_resena.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\imagenes_elegidas.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\imagenes_elegidas.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_imagen_carrusel.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_imagen_carrusel.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_resena.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_resena.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_registro_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_registro_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\item_pedido_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\item_pedido_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_mis_pedidos_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_mis_pedidos_cliente.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_mis_productos_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_mis_productos_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_agregar_producto.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_agregar_producto.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_inicio_cliente.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_inicio_cliente.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/bottomsheet_realizar_pedido.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/bottomsheet_realizar_pedido.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\activity_editar_producto.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\activity_editar_producto.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/item_producto.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/item_producto.xml"
     },
     {
-        "merged": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-mergeDebugResources-44:\\layout\\fragment_inicio_vendedor.xml",
-        "source": "C:\\Users\\ruizf\\.gradle\\daemon\\8.7\\com.example.aurumverus.app-main-47:\\layout\\fragment_inicio_vendedor.xml"
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/nav_header_cliente.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/nav_header_cliente.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_registro_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_registro_vendedor.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/fragment_inicio_vendedor.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/fragment_inicio_vendedor.xml"
+    },
+    {
+        "merged": "com.example.aurumverus.app-mergeDebugResources-44:/layout/activity_editar_producto.xml",
+        "source": "com.example.aurumverus.app-main-47:/layout/activity_editar_producto.xml"
     }
 ]

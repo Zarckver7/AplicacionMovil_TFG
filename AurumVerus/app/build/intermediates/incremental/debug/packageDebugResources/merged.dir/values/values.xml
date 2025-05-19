@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul_claro">#03A9F4</color>
+    <color name="azul_marino">#2471A3</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="dorado">#FFD700</color>
+    <color name="dorado_claro">#FFEE9C</color>
+    <color name="gris">#616161</color>
+    <color name="gris_claro">#BDBDBD</color>
+    <color name="ic_icono_background">#FFFFFF</color>
+    <color name="naranja">#FB8C00</color>
+    <color name="negro">#000000</color>
+    <color name="negro_claro">#212121</color>
+    <color name="rojo">#F44336</color>
+    <color name="verde">#43A047</color>
+    <string name="app_name">Aurum Verus</string>
+    <string name="bienbenida">Bienvenido a Aurum Verus</string>
+    <string name="btnAgregarProd">Agregar Producto</string>
+    <string name="btnComprar">Comprar</string>
+    <string name="btnFiltros">Filtros</string>
+    <string name="btnLoginC">Iniciar Sesión</string>
+    <string name="btnLoginV">Iniciar Sesión</string>
+    <string name="btnRegistrarC">Registrarme</string>
+    <string name="btnRegistrarV">Registrarme</string>
+    <string name="btnVerMenos">Ver menos</string>
+    <string name="buscar">Buscar producto...</string>
+    <string name="categoria">Categoría</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="edtxConContraseñaC">Confirmar Contraseña</string>
+    <string name="edtxConContraseñaV">Confirmar Contraseña</string>
+    <string name="edtxContraseñaC">Contraseña</string>
+    <string name="edtxContraseñaV">Contraseña</string>
+    <string name="edtxCorreoC">Correo electrónico</string>
+    <string name="edtxCorreoV">Correo electrónico de empresa</string>
+    <string name="edtxDescripcionProd">Descripcion</string>
+    <string name="edtxNombreC">Nombre de usuario</string>
+    <string name="edtxNombreProd">Nombre del producto</string>
+    <string name="edtxNombreV">Nombre de Empresa</string>
+    <string name="edtxNotaDesc">Ej: 10% descuento</string>
+    <string name="edtxPrecio">Precio</string>
+    <string name="edtxPrecioDesc">Precio con descuento</string>
+    <string name="gcm_defaultSenderId" translatable="false">404894332729</string>
+    <string name="google_api_key" translatable="false">AIzaSyDGXksJPEBp2LHyk3qCZuZDN_blP84o7wQ</string>
+    <string name="google_app_id" translatable="false">1:404894332729:android:387ff13d3095502e625ae8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDGXksJPEBp2LHyk3qCZuZDN_blP84o7wQ</string>
+    <string name="google_storage_bucket" translatable="false">aurum-verus-tfg.firebasestorage.app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="op_cerrar_seseion_c">Cerrar Sesión</string>
+    <string name="op_cerrar_seseion_v">Cerrar Sesión</string>
+    <string name="op_inicio_c">Inicio</string>
+    <string name="op_inicio_v">Inicio</string>
+    <string name="op_mi_perfil_c">Mi perfil</string>
+    <string name="op_mi_tienda_v">Mi tienda</string>
+    <string name="op_mis_pedidos_c">Mis pedidos</string>
+    <string name="op_mis_pedidos_v">Pedidos</string>
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_resena_v">Reseñas</string>
+    <string name="op_soporte">Soporte</string>
+    <string name="op_tienda_c">Tienda</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="project_id" translatable="false">aurum-verus-tfg</string>
+    <string name="tipoCliente">Soy Cliente</string>
+    <string name="tipoVendedor">Soy Vendedor</string>
+    <string name="tvRegistrarseC">Registrarse ahora</string>
+    <string name="tvRegistrarseV">Únete ahora</string>
+    <string name="txtAgregarProd">Agregar Productos</string>
+    <string name="txtDescuento">Descuento</string>
+    <string name="txtInicioSeleccion">Seleccione su tipo de usuario</string>
+    <string name="txtLoginC">Inicio de Sesión Cliente</string>
+    <string name="txtLoginV">Inicio de Sesión Vendedor</string>
+    <string name="txtRegistroC">Registro de cliente</string>
+    <string name="txtRegistroV">Registro de vendedor</string>
+    <style name="Base.Theme.AurumVerus" parent="Theme.Material3.Dark.NoActionBar">
+        
+
+        
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+    <style name="Theme.AurumVerus" parent="Base.Theme.AurumVerus"/>
+    <style name="Theme.AurumVerus.MainActivity" parent="Base.Theme.AurumVerus">
+        <item name="android:statusBarColor">@android:color/black</item> 
+    </style>
+    <style name="Theme.AurumVerus.Splash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/blanco</item>
+        <item name="android:statusBarColor">@android:color/black</item> 
+    </style>
+    <style name="Widget.Material3.MaterialAutoCompleteTextView" parent="Widget.Material3.AutoCompleteTextView.OutlinedBox">
+        <item name="android:popupBackground">@color/blanco</item>
+    </style>
+</resources>
