@@ -32,6 +32,7 @@ class AdaptadorImagenEditable(
 
         val context = holder.itemView.context
 
+        // Carga la imagen desde internet o desde el dispositivo
         if (imagen.deInternet && imagen.imagenUrl != null) {
             Glide.with(context).load(imagen.imagenUrl).into(holder.imgVista)
         } else if (imagen.imageUri != null) {
@@ -40,13 +41,14 @@ class AdaptadorImagenEditable(
             holder.imgVista.setImageResource(R.drawable.galeria)
         }
 
-        // Portada visual
+        // Muestra si la imagen es portada
         if (imagen.esPortada) {
             holder.btnPortada.setImageResource(R.drawable.ico_marcador_portada)
         } else {
             holder.btnPortada.setImageResource(R.drawable.ico_marcador_no_portada)
         }
 
+        // Acciones al hacer clic en eliminar o marcar como portada
         holder.btnEliminar.setOnClickListener {
             onEliminar(imagen)
         }
@@ -58,3 +60,4 @@ class AdaptadorImagenEditable(
 
     override fun getItemCount(): Int = imagenes.size
 }
+

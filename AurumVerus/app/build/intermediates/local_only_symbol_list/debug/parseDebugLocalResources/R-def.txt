@@ -7,7 +7,6 @@ color dorado
 color dorado_claro
 color gris
 color gris_claro
-color ic_icono_background
 color naranja
 color negro
 color negro_claro

@@ -14,6 +14,7 @@ import com.example.aurumverus.modelos.Producto
 
 class AdaptadorProductosVendedor(private val productos: List<Producto>) :
     RecyclerView.Adapter<AdaptadorProductosVendedor.ProductoViewHolder>() {
+    // Muestra los productos que un vendedor tiene publicados
 
     var onProductoLongClick: ((Producto) -> Unit)? = null
 
@@ -34,11 +35,13 @@ class AdaptadorProductosVendedor(private val productos: List<Producto>) :
         holder.nombre.text = producto.nombre
         holder.precio.text = "${producto.precio}€"
 
+        // Muestra imagen del producto
         Glide.with(holder.itemView.context)
             .load(producto.imagenPrincipal)
             .placeholder(R.drawable.galeria)
             .into(holder.imagen)
 
+        // Al hacer clic en un producto, abre la actividad para editarlo
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, EditarProductoActivity::class.java)

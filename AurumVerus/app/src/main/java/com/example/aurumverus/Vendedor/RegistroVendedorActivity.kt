@@ -1,5 +1,6 @@
 package com.example.aurumverus.Vendedor
 
+// Importaciones necesarias
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Build
@@ -25,6 +26,7 @@ class RegistroVendedorActivity : AppCompatActivity() {
         binding = ActivityRegistroVendedorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Cambia el color de la barra de estado
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
         }
@@ -35,10 +37,10 @@ class RegistroVendedorActivity : AppCompatActivity() {
         progressDialog.setTitle("Por favor espere...")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        binding.btnRegistrarV.setOnClickListener {
-            validarInformacion()
-        }
+        // Botón para registrar
+        binding.btnRegistrarV.setOnClickListener { validarInformacion() }
     }
+
     private var nombre = ""
     private var correo = ""
     private var contraseña = ""
@@ -50,77 +52,57 @@ class RegistroVendedorActivity : AppCompatActivity() {
         contraseña = binding.edtxContraseAV.text.toString().trim()
         cContraseña = binding.edtxConContraseAV.text.toString().trim()
 
-        if (nombre.isEmpty()) {
-            binding.edtxNombreV.error = "Ingrese el nombre de la empresa"
-            binding.edtxNombreV.requestFocus()
-        } else if (correo.isEmpty()) {
-            binding.edtxCorreoV.error = "Ingrese su correo"
-            binding.edtxCorreoV.requestFocus()
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
-            binding.edtxCorreoV.error = "Ingrese un correo válido"
-            binding.edtxCorreoV.requestFocus()
-        }else if (contraseña.isEmpty()) {
-            binding.edtxContraseAV.error = "Ingrese su contraseña"
-            binding.edtxContraseAV.requestFocus()
-        }else if (contraseña.length < 8){
-            binding.edtxContraseAV.error = "La contraseña debe tener al menos 8 caracteres"
-            binding.edtxContraseAV.requestFocus()
-        }else if (cContraseña.isEmpty()) {
-            binding.edtxConContraseAV.error = "Confirme su contraseña"
-            binding.edtxConContraseAV.requestFocus()
-        }else if (contraseña != cContraseña) {
-            binding.edtxConContraseAV.error = "Las contraseñas no coinciden"
-            binding.edtxConContraseAV.requestFocus()
-        } else {
-            registrarVendedor()
+        when {
+            nombre.isEmpty() -> binding.edtxNombreV.error = "Ingrese el nombre de la empresa"
+            correo.isEmpty() -> binding.edtxCorreoV.error = "Ingrese su correo"
+            !Patterns.EMAIL_ADDRESS.matcher(correo).matches() -> binding.edtxCorreoV.error = "Correo no válido"
+            contraseña.isEmpty() -> binding.edtxContraseAV.error = "Ingrese su contraseña"
+            contraseña.length < 8 -> binding.edtxContraseAV.error = "Mínimo 8 caracteres"
+            cContraseña.isEmpty() -> binding.edtxConContraseAV.error = "Confirme su contraseña"
+            contraseña != cContraseña -> binding.edtxConContraseAV.error = "No coinciden"
+            else -> registrarVendedor()
         }
-
     }
 
-
-
+    // Crea usuario en Firebase
     private fun registrarVendedor() {
         progressDialog.setMessage("Registrando...")
         progressDialog.show()
 
         firebaseAuth.createUserWithEmailAndPassword(correo, contraseña)
-            .addOnSuccessListener {
-                insertarInfoBD()
-            }
+            .addOnSuccessListener { insertarInfoBD() }
             .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Ocurrió un error en el registro, código de error: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error en el registro: " +
+                        "${e.message}", Toast.LENGTH_SHORT).show()
             }
-
-
     }
 
+    // Guarda datos adicionales en la base de datos
     private fun insertarInfoBD() {
         progressDialog.setMessage("Guardando información...")
 
         val uidBD = firebaseAuth.uid
-        val nombreBD = nombre
-        val correoBD = correo
         val horaBD = Constantes().tiempoD()
-        val datosV = HashMap<String, Any>()
 
-        datosV["uid"] = "$uidBD"
-        datosV["nombre"] = "$nombreBD"
-        datosV["correo"] = "$correoBD"
-        datosV["tipoUsuario"] = "Vendedor"
-        datosV["hora"] = horaBD
+        val datosV = hashMapOf(
+            "uid" to uidBD!!,
+            "nombre" to nombre,
+            "correo" to correo,
+            "tipoUsuario" to "Vendedor",
+            "hora" to horaBD
+        )
 
         val referenciaBD = FirebaseDatabase.getInstance().getReference("Usuarios")
-        referenciaBD.child("$uidBD")
-            .setValue(datosV)
+        referenciaBD.child(uidBD).setValue(datosV)
             .addOnSuccessListener {
                 progressDialog.dismiss()
                 startActivity(Intent(this, MainActivityVendedor::class.java))
                 finish()
             }
-            .addOnFailureListener {e ->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Ocurrió un error en la base de datos, código de error: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error en la base de datos: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }

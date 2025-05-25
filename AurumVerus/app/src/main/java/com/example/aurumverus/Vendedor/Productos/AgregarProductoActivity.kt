@@ -1,5 +1,6 @@
 package com.example.aurumverus.Vendedor.Productos
 
+// Importaciones necesarias
 import android.app.Activity
 import android.app.ProgressDialog
 import android.net.Uri
@@ -24,14 +25,21 @@ import com.google.firebase.storage.FirebaseStorage
 
 class AgregarProductoActivity : AppCompatActivity() {
 
+    // ViewBinding
     private lateinit var binding: ActivityAgregarProductoBinding
     private lateinit var progressDialog: ProgressDialog
+
+    // Imagen seleccionada por el usuario
     private var imagenUri: Uri? = null
 
+    // Lista de imágenes del producto
     private lateinit var imagenSeleccionadaArrayList: ArrayList<ImagenSeleccionada>
     private lateinit var adaptadorImagenSeleccionada: AdaptadorImagenSeleccionada
+
+    // Firebase
     private lateinit var firebaseAuth: FirebaseAuth
 
+    // Datos del producto
     private var nombreP = ""
     private var descripcionP = ""
     private var precioP = ""
@@ -42,6 +50,7 @@ class AgregarProductoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Cambia el color de la barra de estado
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = ContextCompat.getColor(this, R.color.negro_claro)
         }
@@ -51,27 +60,28 @@ class AgregarProductoActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         imagenSeleccionadaArrayList = ArrayList()
-        cargarImagenes()
+        cargarImagenes() // Inicializa el adaptador
 
-        setupSpinner()
+        setupSpinner() // Carga las categorías en el spinner
 
+        // Cuadro de progreso
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Espere por favor...")
         progressDialog.setCanceledOnTouchOutside(false)
 
-        binding.imgAgregarProd.setOnClickListener {
-            seleccionarImagen()
-        }
+        // Botón para seleccionar imagen
+        binding.imgAgregarProd.setOnClickListener { seleccionarImagen() }
 
-        binding.btnAgregarProd.setOnClickListener {
-            validarInformacion()
-        }
+        // Botón para agregar producto
+        binding.btnAgregarProd.setOnClickListener { validarInformacion() }
     }
 
+    // Configura el selector de categoría con una lista fija
     private fun setupSpinner() {
         val categorias = listOf(
             "Ropa", "Electrónica", "Comida", "Accesorios", "Hogar",
-            "Bolsos y mochilas", "Joyería", "Consolas y videojuegos", "Perfumería", "Libros", "Otros"
+            "Bolsos y mochilas", "Joyería", "Consolas y videojuegos",
+            "Perfumería", "Libros", "Cestas","Otros"
         )
 
         val adapter = ArrayAdapter(this, R.layout.spinner_item_dropdown, categorias)
@@ -82,11 +92,13 @@ class AgregarProductoActivity : AppCompatActivity() {
         }
     }
 
+    // Inicializa el adaptador con la lista de imágenes seleccionadas
     private fun cargarImagenes() {
         adaptadorImagenSeleccionada = AdaptadorImagenSeleccionada(this, imagenSeleccionadaArrayList)
         binding.imagenesProductos.adapter = adaptadorImagenSeleccionada
     }
 
+    // Abre el selector de imágenes
     private fun seleccionarImagen() {
         ImagePicker.with(this)
             .crop()
@@ -95,56 +107,56 @@ class AgregarProductoActivity : AppCompatActivity() {
             .createIntent { intent -> resultadoImagen.launch(intent) }
     }
 
-    private val resultadoImagen =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { resultado ->
-            if (resultado.resultCode == Activity.RESULT_OK) {
-                val data = resultado.data
-                imagenUri = data?.data
-                val tiempo = Constantes().tiempoD()
+    // Maneja el resultado del selector de imágenes
+    private val resultadoImagen = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { resultado ->
+        if (resultado.resultCode == Activity.RESULT_OK) {
+            val data = resultado.data
+            imagenUri = data?.data
+            val tiempo = Constantes().tiempoD()
 
-                val modelo = ImagenSeleccionada(tiempo, imagenUri, null, false, false)
-                imagenSeleccionadaArrayList.add(modelo)
-                cargarImagenes()
-            } else {
-                Toast.makeText(this, "No se seleccionó ninguna imagen", Toast.LENGTH_SHORT).show()
-            }
+            val modelo = ImagenSeleccionada(tiempo, imagenUri, null, false, false)
+            imagenSeleccionadaArrayList.add(modelo)
+            cargarImagenes()
+        } else {
+            Toast.makeText(this, "No se seleccionó ninguna imagen", Toast.LENGTH_SHORT).show()
         }
+    }
 
+    // Verifica que los campos estén llenos
     private fun validarInformacion() {
         nombreP = binding.edtxNombreProd.text.toString().trim()
         descripcionP = binding.edtxDescripcionProd.text.toString().trim()
         precioP = binding.edtxPrecio.text.toString().trim()
         categoriaP = binding.autoCategoria.text.toString().trim()
 
-        if (nombreP.isEmpty()) {
-            binding.edtxNombreProd.error = "Ingrese el nombre del producto"
-        } else if (descripcionP.isEmpty()) {
-            binding.edtxDescripcionProd.error = "Ingrese la descripción"
-        } else if (precioP.isEmpty()) {
-            binding.edtxPrecio.error = "Ingrese el precio"
-        } else if (categoriaP.isEmpty()) {
-            Toast.makeText(this, "Seleccione una categoría", Toast.LENGTH_SHORT).show()
-        } else {
-            obtenerNombreVendedorYAgregar()
+        when {
+            nombreP.isEmpty() -> binding.edtxNombreProd.error = "Ingrese el nombre del producto"
+            descripcionP.isEmpty() -> binding.edtxDescripcionProd.error = "Ingrese la descripción"
+            precioP.isEmpty() -> binding.edtxPrecio.error = "Ingrese el precio"
+            categoriaP.isEmpty() -> Toast.makeText(this, "Seleccione una categoría", Toast.LENGTH_SHORT).show()
+            else -> obtenerNombreVendedorYAgregar()
         }
     }
 
+    // Obtiene el nombre del vendedor desde Firebase antes de guardar
     private fun obtenerNombreVendedorYAgregar() {
         val uid = firebaseAuth.uid ?: return
         val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
-        ref.child(uid)
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    nombreVendedor = snapshot.child("nombre").value?.toString() ?: "Desconocido"
-                    subirImagenesYGuardarProducto(uid)
-                }
+        ref.child(uid).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                nombreVendedor = snapshot.child("nombre").value?.toString() ?: "Desconocido"
+                subirImagenesYGuardarProducto(uid)
+            }
 
-                override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(this@AgregarProductoActivity, "Error al obtener datos del vendedor", Toast.LENGTH_SHORT).show()
-                }
-            })
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@AgregarProductoActivity, "Error al obtener datos del vendedor", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
+    // Sube todas las imágenes y luego guarda los datos del producto
     private fun subirImagenesYGuardarProducto(uid: String) {
         progressDialog.setMessage("Subiendo imágenes...")
         progressDialog.show()
@@ -155,39 +167,39 @@ class AgregarProductoActivity : AppCompatActivity() {
 
         val uploadTasks = mutableListOf<com.google.android.gms.tasks.Task<Uri>>()
 
+        // Sube cada imagen
         imagenSeleccionadaArrayList.forEachIndexed { index, imagen ->
             val uri = imagen.imageUri ?: return@forEachIndexed
-
             val nombreImagen = "${idProducto}_${index}_${System.currentTimeMillis()}.jpg"
             val refImg = refStorage.child(nombreImagen)
 
             val uploadTask = refImg.putFile(uri)
                 .continueWithTask { task ->
-                    if (!task.isSuccessful) {
-                        throw task.exception ?: Exception("Error al subir imagen")
-                    }
+                    if (!task.isSuccessful) throw task.exception ?: Exception("Error al subir imagen")
                     refImg.downloadUrl
                 }
 
             uploadTasks.add(uploadTask)
         }
 
+        // Espera a que todas las imágenes se suban
         com.google.android.gms.tasks.Tasks.whenAllSuccess<Uri>(uploadTasks)
             .addOnSuccessListener { urls ->
                 val imagenesUrls = urls.map { it.toString() }
                 val imagenPrincipal = imagenesUrls.firstOrNull() ?: ""
 
-                val hashMap = HashMap<String, Any>()
-                hashMap["idProducto"] = idProducto
-                hashMap["nombre"] = nombreP
-                hashMap["descripcion"] = descripcionP
-                hashMap["precio"] = precioP
-                hashMap["categoria"] = categoriaP
-                hashMap["uid"] = uid
-                hashMap["nombreVendedor"] = nombreVendedor
-                hashMap["horaCreacion"] = horaBD
-                hashMap["imagenPrincipal"] = imagenPrincipal
-                hashMap["imagenes"] = imagenesUrls
+                val hashMap = hashMapOf(
+                    "idProducto" to idProducto,
+                    "nombre" to nombreP,
+                    "descripcion" to descripcionP,
+                    "precio" to precioP,
+                    "categoria" to categoriaP,
+                    "uid" to uid,
+                    "nombreVendedor" to nombreVendedor,
+                    "horaCreacion" to horaBD,
+                    "imagenPrincipal" to imagenPrincipal,
+                    "imagenes" to imagenesUrls
+                )
 
                 refDB.child(idProducto).setValue(hashMap)
                     .addOnSuccessListener {
@@ -206,6 +218,7 @@ class AgregarProductoActivity : AppCompatActivity() {
             }
     }
 
+    // Limpia los campos después de guardar
     private fun limpiarCampos() {
         binding.edtxNombreProd.text.clear()
         binding.edtxDescripcionProd.text.clear()

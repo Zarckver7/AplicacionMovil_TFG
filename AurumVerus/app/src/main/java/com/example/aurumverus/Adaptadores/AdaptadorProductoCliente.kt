@@ -11,6 +11,7 @@ import com.example.aurumverus.R
 import com.example.aurumverus.modelos.Producto
 
 class AdaptadorProductoCliente(
+    // Muestra productos al cliente para comprar
     private val listaProductos: List<Producto>
 ) : RecyclerView.Adapter<AdaptadorProductoCliente.ProductoViewHolder>() {
 
@@ -28,6 +29,7 @@ class AdaptadorProductoCliente(
     }
 
     override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
+        // Al hacer clic, muestra un diálogo para hacer pedido
         val producto = listaProductos[position]
         holder.txtNombre.text = producto.nombre
         holder.txtPrecio.text = "${producto.precio} €"
@@ -43,6 +45,7 @@ class AdaptadorProductoCliente(
 
         val imagen = producto.imagenPrincipal
         if (!imagen.isNullOrEmpty()) {
+            // Muestra la imagen del producto
             Glide.with(holder.itemView.context)
                 .load(imagen)
                 .placeholder(R.drawable.galeria)

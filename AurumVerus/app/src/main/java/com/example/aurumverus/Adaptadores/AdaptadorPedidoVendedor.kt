@@ -13,7 +13,7 @@ import java.util.*
 
 class AdaptadorPedidoVendedor(private val listaPedidos: List<Pedido>) :
     RecyclerView.Adapter<AdaptadorPedidoVendedor.PedidoViewHolder>() {
-
+    // Muestra los pedidos recibidos por un vendedor
     inner class PedidoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val txtNombre: TextView = view.findViewById(R.id.txtNombreProducto)
         val txtCliente: TextView = view.findViewById(R.id.txtCliente)
@@ -32,7 +32,7 @@ class AdaptadorPedidoVendedor(private val listaPedidos: List<Pedido>) :
 
     override fun onBindViewHolder(holder: PedidoViewHolder, position: Int) {
         val pedido = listaPedidos[position]
-
+        // Muestra los detalles del pedido
         holder.txtNombre.text = pedido.nombreProducto
         holder.txtCliente.text = "Cliente: ${pedido.nombreCliente}"
         holder.txtDireccion.text = "Dirección: ${pedido.direccion}"
@@ -42,6 +42,7 @@ class AdaptadorPedidoVendedor(private val listaPedidos: List<Pedido>) :
         val fecha = formato.format(Date(pedido.timestamp ?: 0))
         holder.txtFecha.text = "Fecha: $fecha"
 
+        // Muestra u oculta el botón de "Confirmar"
         if (pedido.confirmado) {
             holder.txtEstado.text = "Estado: Confirmado"
             holder.btnConfirmar.visibility = View.GONE

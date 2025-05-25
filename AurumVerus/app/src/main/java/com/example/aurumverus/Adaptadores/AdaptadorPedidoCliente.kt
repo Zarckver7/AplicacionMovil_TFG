@@ -14,7 +14,7 @@ import androidx.appcompat.app.AlertDialog
 
 class AdaptadorPedidoCliente(private val listaPedidos: List<Pedido>) :
     RecyclerView.Adapter<AdaptadorPedidoCliente.PedidoViewHolder>() {
-
+    // Adaptador para mostrar los pedidos realizados por el cliente
     inner class PedidoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val txtNombre: TextView = view.findViewById(R.id.txtNombreProducto)
         val txtPrecio: TextView = view.findViewById(R.id.txtPrecioProducto)
@@ -32,6 +32,7 @@ class AdaptadorPedidoCliente(private val listaPedidos: List<Pedido>) :
 
     override fun onBindViewHolder(holder: PedidoViewHolder, position: Int) {
         val pedido = listaPedidos[position]
+        // Muestra información básica del pedido
         holder.txtNombre.text = pedido.nombreProducto
         holder.txtPrecio.text = "Precio: ${pedido.precio} €"
 
@@ -45,6 +46,7 @@ class AdaptadorPedidoCliente(private val listaPedidos: List<Pedido>) :
             if (pedido.confirmado) R.drawable.ico_confirmado else R.drawable.ico_sin_confirmar
         )
 
+        // Al hacer clic, muestra un cuadro de diálogo con todos los detalles
         holder.itemView.setOnClickListener {
             val contexto = holder.itemView.context
             val mensaje = """
